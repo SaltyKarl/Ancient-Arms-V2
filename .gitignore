@@ -2,3 +2,4 @@
 /Source/Properties/*
 /Source/obj/*
 /Source/obj/Debug
+*.cache
