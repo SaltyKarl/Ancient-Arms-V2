@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Configuration>
 	<Excluded>
+		<exclude>.git</exclude>
 		<exclude>Source</exclude>
+		<exclude>.gitattributes</exclude>
+		<exclude>Textures/Unused</exclude>
 	</Excluded>
 </Configuration>

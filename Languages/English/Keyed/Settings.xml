@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
     <AncientChargedArms>Ancient Charged Arms</AncientChargedArms>
+    <NaniteChargeAmmoSpawnChance>Nanite Charge Ammo Spawn Chance</NaniteChargeAmmoSpawnChance>
     <AntigrainChargeAmmoSpawnChance>Antigrain Charge Ammo Spawn Chance</AntigrainChargeAmmoSpawnChance>
     <RestoreDefaults>Restore Defaults</RestoreDefaults>
+    <RequiresCombatExtended>This version of the mod requires Combat Extended as a dependency.</RequiresCombatExtended>
 </LanguageData>

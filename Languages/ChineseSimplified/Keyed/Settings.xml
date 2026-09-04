@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <AncientChargedArms>远古电荷武器</AncientChargedArms>
+  <NaniteChargeAmmoSpawnChance>纳米电荷弹药出现概率</NaniteChargeAmmoSpawnChance>
   <AntigrainChargeAmmoSpawnChance>反粒子电荷弹药出现概率</AntigrainChargeAmmoSpawnChance>
   <RestoreDefaults>恢复默认</RestoreDefaults>
+  <RequiresCombatExtended>本版本模组需要 Combat Extended 作为前置依赖。</RequiresCombatExtended>
 
 </LanguageData>
