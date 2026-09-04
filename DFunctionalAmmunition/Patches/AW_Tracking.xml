@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- === Ancient Charged Javelin === -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName = "Bullet_AW_ChargeJavelin_HEAT"]/projectile</xpath>
+		<value>
+			<flyOverhead>true</flyOverhead>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName = "Bullet_AW_ChargeJavelin_HEAT"]</xpath>
+		<value>
+			<thingClass>D_FuncAmmoLib.Projectile</thingClass>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Bullet_AW_ChargeJavelin_HEAT"]/projectile/speed</xpath>
+		<value>
+			<fuelTicks>60</fuelTicks>
+			<speedGain>50</speedGain>
+			<speed>10</speed>
+			<trajectoryWorker>D_FuncAmmoLib.MissileTrajectoryWorker</trajectoryWorker>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName = "Bullet_AW_ChargeJavelin_HEAT"]/comps</xpath>
+		<value>
+			<li Class="D_FuncAmmoLib.CompProperties_GuidanceCE">
+				<GuidanceMode>Active</GuidanceMode>
+				<TopAttackTrajectory></TopAttackTrajectory>
+			</li>
+			<li Class="D_FuncAmmoLib.CompProperties_TandemCharge">
+				<warhead>Bullet_AW_ChargeJavelin_HEAT_TandemCharge</warhead>
+			</li>
+		</value>
+	</Operation>
+</Patch>

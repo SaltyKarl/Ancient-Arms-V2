@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ammo -->
+
+  <!--<Ammo_15x65mmCharged_Anti.label>15x65mm反粒子电荷弹药</Ammo_15x65mmCharged_Anti.label>-->
+  <!--<Ammo_15x65mmIonCharged.label>15x65mm离子电荷弹药</Ammo_15x65mmIonCharged.label>-->
+  <!--<Ammo_15x65mmToxCharged.label>15x65mm离子电荷弹药</Ammo_15x65mmToxCharged.label>-->
+
+
+  <!-- Projectiles -->
+
+  <!--<Bullet_15x65mmCharged_Anti.label>反粒子电荷子弹</Bullet_15x65mmCharged_Anti.label>-->
+  <!--<Bullet_15x65mmCharged_Ion.label>离子电荷子弹</Bullet_15x65mmCharged_Ion.label>-->
+  <!--<Bullet_15x65mmCharged_Tox.label>毒素电荷子弹</Bullet_15x65mmCharged_Tox.label>-->
+
+</LanguageData>

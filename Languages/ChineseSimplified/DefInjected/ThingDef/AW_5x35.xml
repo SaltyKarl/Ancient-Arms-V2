@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ammo -->
+
+  <Ammo_5x35mmAdvCharged_Ion.label>5x35mm离子电荷弹药</Ammo_5x35mmAdvCharged_Ion.label>
+  <Ammo_5x35mmAdvCharged_Tox.label>5x35mm毒素电荷弹药</Ammo_5x35mmAdvCharged_Tox.label>
+  <Ammo_5x35mmAdvCharged_Anti.label>5x35mm反粒子电荷弹药</Ammo_5x35mmAdvCharged_Anti.label>
+
+
+  <!-- Low velocity 5x35mm Projectiles -->
+
+  <AW_Bullet_5x35mm_S.label>5x35mm Special bullet</AW_Bullet_5x35mm_S.label>
+  <Bullet_5x35mmAdvCharged_Ion_S.label>5x35mm Special bullet (Ion)</Bullet_5x35mmAdvCharged_Ion_S.label>
+  <Bullet_5x35mmAdvCharged_Tox_S.label>5x35mm Special bullet (Toxic)</Bullet_5x35mmAdvCharged_Tox_S.label>
+  <Bullet_5x35mmAdvCharged_Anti_S.label>5x35mm Special bullet (Anti)</Bullet_5x35mmAdvCharged_Anti_S.label>
+
+
+  <!-- Normal 5x35mm Projectiles -->
+
+  <Bullet_5x35mmAdvCharged_Ion.label>离子电荷子弹</Bullet_5x35mmAdvCharged_Ion.label>
+  <Bullet_5x35mmAdvCharged_Tox.label>反粒子电荷子弹</Bullet_5x35mmAdvCharged_Tox.label>
+  <Bullet_5x35mmAdvCharged_Anti.label>毒素电荷子弹</Bullet_5x35mmAdvCharged_Anti.label>
+
+
+  <!-- High velocity 5x35mm Projectile -->
+
+  <AW_Bullet_5x35mm_H.label>5x35mm Hyper bullet</AW_Bullet_5x35mm_H.label>
+  <Bullet_5x35mmAdvCharged_Ion_H.label>5x35mm Hyper bullet</Bullet_5x35mmAdvCharged_Ion_H.label>
+  <Bullet_5x35mmAdvCharged_Tox_H.label>5x35mm Hyper bullet</Bullet_5x35mmAdvCharged_Tox_H.label>
+  <Bullet_5x35mmAdvCharged_Anti_H.label>5x35mm Hyper bullet</Bullet_5x35mmAdvCharged_Anti_H.label>
+
+
+  <!-- Projectiles -->
+
+</LanguageData>

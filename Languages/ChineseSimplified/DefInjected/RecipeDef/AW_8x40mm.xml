@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Recipes -->
+
+  <MakeAmmo_8x40mmAdvCharged_Ion.label>制作500发8x40mm离子电荷弹药</MakeAmmo_8x40mmAdvCharged_Ion.label>
+  <MakeAmmo_8x40mmAdvCharged_Ion.description>制作500发8x40mm离子电荷弹药</MakeAmmo_8x40mmAdvCharged_Ion.description>
+  <MakeAmmo_8x40mmAdvCharged_Ion.jobString>正在制作500发8x40mm离子电荷弹药</MakeAmmo_8x40mmAdvCharged_Ion.jobString>
+
+  <MakeAmmo_8x40mmAdvCharged_Tox.label>制作500发8x40mm毒素电荷弹药</MakeAmmo_8x40mmAdvCharged_Tox.label>
+  <MakeAmmo_8x40mmAdvCharged_Tox.description>制作500发8x40mm毒素电荷弹药</MakeAmmo_8x40mmAdvCharged_Tox.description>
+  <MakeAmmo_8x40mmAdvCharged_Tox.jobString>正在制作500发8x40mm毒素电荷弹药</MakeAmmo_8x40mmAdvCharged_Tox.jobString>
+
+  <MakeAmmo_8x40mmAdvCharged_Anti.label>制作500发8x40mm反粒子电荷弹药</MakeAmmo_8x40mmAdvCharged_Anti.label>
+  <MakeAmmo_8x40mmAdvCharged_Anti.description>制作500发8x40mm反粒子电荷弹药</MakeAmmo_8x40mmAdvCharged_Anti.description>
+  <MakeAmmo_8x40mmAdvCharged_Anti.jobString>正在制作500发8x40mm反粒子电荷弹药</MakeAmmo_8x40mmAdvCharged_Anti.jobString>
+
+
+</LanguageData>

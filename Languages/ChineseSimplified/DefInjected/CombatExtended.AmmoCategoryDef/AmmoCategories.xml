@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <AWCE_Tox.label>电荷弹药(毒素)</AWCE_Tox.label>
+  <AWCE_Tox.description>弹药带有剧毒金属的机械电荷弹药。</AWCE_Tox.description>
+
+  <AWCE_Anti.label>电荷弹药(反粒子)</AWCE_Anti.label>
+  <AWCE_Anti.description>使用反粒子技术的机械电荷弹药。</AWCE_Anti.description>
+
+
+</LanguageData>

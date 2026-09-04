@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Recipes -->
+
+  <MakeAmmo_6x22mmAdvCharged_Ion.label>制作500发6x22mm离子电荷弹药</MakeAmmo_6x22mmAdvCharged_Ion.label>
+  <MakeAmmo_6x22mmAdvCharged_Ion.description>制作500发6x22mm离子电荷弹药</MakeAmmo_6x22mmAdvCharged_Ion.description>
+  <MakeAmmo_6x22mmAdvCharged_Ion.jobString>正在制作500发6x22mm离子电荷弹药</MakeAmmo_6x22mmAdvCharged_Ion.jobString>
+
+  <MakeAmmo_6x22mmAdvCharged_Tox.label>制作500发6x22mm毒素电荷弹药</MakeAmmo_6x22mmAdvCharged_Tox.label>
+  <MakeAmmo_6x22mmAdvCharged_Tox.description>制作500发6x22mm毒素电荷弹药</MakeAmmo_6x22mmAdvCharged_Tox.description>
+  <MakeAmmo_6x22mmAdvCharged_Tox.jobString>正在制作500发6x22mm毒素电荷弹药</MakeAmmo_6x22mmAdvCharged_Tox.jobString>
+
+
+</LanguageData>

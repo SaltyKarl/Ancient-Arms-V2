@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_20x105mm_ADACharged</defName>
+		<label>20x105mm Adaptive Charged</label>
+		<ammoTypes>
+			<Ammo_20x105mmCharged>Bullet_20x105mmCharged</Ammo_20x105mmCharged>
+			<Ammo_20x105mmCharged_NE>Bullet_20x105mmCharged_NE</Ammo_20x105mmCharged_NE>
+			<Ammo_20x105mmCharged_CM>Bullet_20x105mmCharged_CM</Ammo_20x105mmCharged_CM>
+			<Ammo_20x105mmCharged_AP>Bullet_20x105mmCharged_AP</Ammo_20x105mmCharged_AP>
+			<Ammo_20x105mmCharged_Ion>Bullet_20x105mmCharged_Ion</Ammo_20x105mmCharged_Ion>
+		</ammoTypes>
+		<similarTo>AmmoSet_ChargedHeavy</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="20x105mmChargedBase">
+		<defName>Ammo_20x105mmCharged_NE</defName>
+		<label>20x105mm Charged (N.E)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Embed/L</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_NanoExplosive</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="20x105mmChargedBase">
+		<defName>Ammo_20x105mmCharged_CM</defName>
+		<label>20x105mm Charged (NANO)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Acid/L</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_FleshEatingNanites</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="20x105mmChargedBase">
+		<defName>Ammo_20x105mmCharged_ANTI</defName>
+		<label>20x105mm Charged (Anti)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/AntiGrain</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_Anti</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="Base20x105mmChargedBullet">
+		<defName>Bullet_20x105mmCharged_NE</defName>
+		<label>20x105mm Charged bullet (N.E)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>AW_NanoExplosive</damageDef>
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationSharp>40</armorPenetrationSharp>
+			<armorPenetrationBlunt>1210</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base20x105mmChargedBullet">
+		<defName>Bullet_20x105mmCharged_CM</defName>
+		<label>20x105mm Charged bullet (NANO)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>AW_AcidMechanites</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_20x105mmCharged_NE</defName>
+		<label>make 20x105mm Charged (N.E) cartridge x80</label>
+		<description>Craft 80 20x105mm Charged (N.E) cartridges.</description>
+		<jobString>Making 20x105mm Charged (N.E) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_20x105mmCharged_NE>80</Ammo_20x105mmCharged_NE>
+		</products>
+		<workAmount>28600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_20x105mmCharged_CM</defName>
+		<label>make 20x105mm Charged (NANO) cartridge x80</label>
+		<description>Craft 80 20x105mm Charged (NANO) cartridges.</description>
+		<jobString>Making 20x105mm Charged (NANO) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_20x105mmCharged_CM>80</Ammo_20x105mmCharged_CM>
+		</products>
+		<workAmount>28600</workAmount>
+	</RecipeDef>
+
+</Defs>

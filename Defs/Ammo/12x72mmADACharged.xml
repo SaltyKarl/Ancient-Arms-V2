@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_12x72mm_ADACharged</defName>
+		<label>12x72mm Adaptive Charged</label>
+		<ammoTypes>
+			<Ammo_12x64mmCharged>Bullet_12x64mmCharged</Ammo_12x64mmCharged>
+			<Ammo_12x72mmCharged>Bullet_12x72mmCharged</Ammo_12x72mmCharged>
+			<Ammo_12x72mmCharged_NE>Bullet_12x72mmCharged_NE</Ammo_12x72mmCharged_NE>
+			<Ammo_12x72mmCharged_CM>Bullet_12x72mmCharged_CM</Ammo_12x72mmCharged_CM>
+			<Ammo_12x72mmCharged_AP>Bullet_12x72mmCharged_AP</Ammo_12x72mmCharged_AP>
+			<Ammo_12x72mmCharged_Ion>Bullet_12x72mmCharged_Ion</Ammo_12x72mmCharged_Ion>
+			<Ammo_12x72mmCharged_ANTI>Bullet_12x72mmCharged_ANTI</Ammo_12x72mmCharged_ANTI>
+		</ammoTypes>
+		<similarTo>AmmoSet_ChargedHeavy</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12x72mmChargedBase">
+		<defName>Ammo_12x72mmCharged_NE</defName>
+		<label>12x72mm Charged (N.E)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Embed/L</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_NanoExplosive</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12x72mmChargedBase">
+		<defName>Ammo_12x72mmCharged_CM</defName>
+		<label>12x72mm Charged (NANO)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Acid/L</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_FleshEatingNanites</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12x72mmChargedBase">
+		<defName>Ammo_12x72mmCharged_ANTI</defName>
+		<label>12x72mm Charged (Anti)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/AntiGrain</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_Anti</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="Base12x72mmChargedBullet">
+		<defName>Bullet_12x72mmCharged_NE</defName>
+		<label>12x72mm Charged bullet (N.E)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>AW_NanoExplosive</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetrationSharp>24</armorPenetrationSharp>
+			<armorPenetrationBlunt>57.6</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12x72mmChargedBullet">
+		<defName>Bullet_12x72mmCharged_CM</defName>
+		<label>12x72mm Charged bullet (NANO)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>AW_AcidMechanites</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12x72mmChargedBullet">
+		<defName>Bullet_12x72mmCharged_ANTI</defName>
+		<label>12x72mm Charged bullet (Anti)</label>
+		<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>31</damageAmountBase>
+			<armorPenetrationSharp>60</armorPenetrationSharp>
+			<armorPenetrationBlunt>324</armorPenetrationBlunt>
+		</projectile>
+		<comps>
+			<li Class="CombatExtended.CompProperties_ExplosiveCE">
+				<damageAmountBase>100</damageAmountBase>
+				<explosiveDamageType>BombSuper</explosiveDamageType>
+				<explosiveRadius>1.5</explosiveRadius>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_12x72mmCharged_NE</defName>
+		<label>make 12x72mm Charged (N.E) cartridge x400</label>
+		<description>Craft 400 12x72mm Charged (N.E) cartridges.</description>
+		<jobString>Making 12x72mm Charged (N.E) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>32</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>17</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12x72mmCharged_NE>400</Ammo_12x72mmCharged_NE>
+		</products>
+		<workAmount>22000</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_12x72mmCharged_CM</defName>
+		<label>make 12x72mm Charged (NANO) cartridge x400</label>
+		<description>Craft 400 12x72mm Charged (NANO) cartridges.</description>
+		<jobString>Making 12x72mm Charged (NANO) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>32</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>17</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12x72mmCharged_CM>400</Ammo_12x72mmCharged_CM>
+		</products>
+		<workAmount>22000</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_12x72mmCharged_ANTI</defName>
+		<label>make 12x72mm Charged (Anti) cartridge x100</label>
+		<description>Craft 100 12x72mm Charged (Anti) cartridges.</description>
+		<jobString>Making 12x72mm Charged (Anti) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentSpacer</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentSpacer</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12x72mmCharged_ANTI>100</Ammo_12x72mmCharged_ANTI>
+		</products>
+		<workAmount>22000</workAmount>
+	</RecipeDef>
+
+</Defs>

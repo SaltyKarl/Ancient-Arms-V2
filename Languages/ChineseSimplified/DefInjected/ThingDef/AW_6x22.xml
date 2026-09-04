@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ammo -->
+
+  <Ammo_6x22mmAdvCharged_Ion.label>6x22mm离子电荷弹药</Ammo_6x22mmAdvCharged_Ion.label>
+  <Ammo_6x22mmAdvCharged_Tox.label>6x22mm毒素电荷弹药</Ammo_6x22mmAdvCharged_Tox.label>
+
+
+  <!-- Projectiles -->
+
+  <Bullet_6x22mmAdvCharged_Ion.label>离子电荷子弹</Bullet_6x22mmAdvCharged_Ion.label>
+  <Bullet_6x22mmAdvCharged_Tox.label>毒素电荷子弹</Bullet_6x22mmAdvCharged_Tox.label>
+
+
+</LanguageData>

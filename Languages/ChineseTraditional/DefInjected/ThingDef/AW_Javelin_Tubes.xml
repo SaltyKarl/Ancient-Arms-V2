@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ammo -->
+
+  <Ammo_AW_ChargeJavelin_HEAT.label>Charged Javelin tubes</Ammo_AW_ChargeJavelin_HEAT.label>
+  <Ammo_AW_ChargeJavelin_HEAT.description>Ancient Charged Javelin tubes.</Ammo_AW_ChargeJavelin_HEAT.description>
+
+
+  <!-- Projectiles -->
+
+  <Bullet_AW_ChargeJavelin_HEAT.label>Ancient Javelin missile</Bullet_AW_ChargeJavelin_HEAT.label>
+
+
+</LanguageData>

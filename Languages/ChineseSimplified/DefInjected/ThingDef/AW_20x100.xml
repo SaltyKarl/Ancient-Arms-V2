@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ammo -->
+
+  <Ammo_20x100mmAdvCharged.label>20x100mm电荷弹</Ammo_20x100mmAdvCharged.label>
+  <Ammo_20x100mmAdvCharged.description>机械族制造的大口径自动炮电荷弹药。</Ammo_20x100mmAdvCharged.description>
+
+  <Ammo_20x100mmAdvCharged_Ion.label>20x100mm 离子电荷弹</Ammo_20x100mmAdvCharged_Ion.label>
+  <Ammo_20x100mmAdvCharged_Ion.description>机械族制造的大口径自动炮电荷弹药。</Ammo_20x100mmAdvCharged_Ion.description>
+
+  <Ammo_20x100mmAdvCharged_Anti.label>20x100mm 反粒子电荷弹</Ammo_20x100mmAdvCharged_Anti.label>
+  <Ammo_20x100mmAdvCharged_Anti.description>机械族制造的大口径自动炮电荷弹药。</Ammo_20x100mmAdvCharged_Anti.description>
+
+
+  <!-- Projectiles -->
+
+  <Bullet_20x100mmAdvCharged.label>20x100mm电荷弹</Bullet_20x100mmAdvCharged.label>
+  <Bullet_20x100mmAdvCharged_Ion.label>20x100mm离子电荷弹</Bullet_20x100mmAdvCharged_Ion.label>
+  <Bullet_20x100mmAdvCharged_Anti.label>20x100mm反粒子电荷弹</Bullet_20x100mmAdvCharged_Anti.label>
+
+
+</LanguageData>

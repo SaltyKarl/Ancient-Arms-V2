@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>AW_NanoExplosive</defName>
+		<label>embed explosive</label>
+		<description>A swarm of mechanites is making an explosive mixture inside</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>100</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-48</severityPerDay>
+			</li>
+			<!-- The custom comp: damage = damagePerSeverity * currentSeverity, every intervalTicks -->
+			<li Class="AncientChargedArms.HediffCompProperties_DOT">
+				<intervalTicks>600</intervalTicks>
+				<damageDef>AcidBurn</damageDef>
+				<damagePerSeverity>1</damagePerSeverity>
+				<moteDef>Mote_ToxicDamage</moteDef>
+				<moteScale>1</moteScale>
+				<aoeDamageDef>Bomb</aoeDamageDef>
+				<aoeRadius>5</aoeRadius>
+				<aoeRadiusPerSeverity>0.5</aoeRadiusPerSeverity>
+				<aoeDamagePerSeverity>1</aoeDamagePerSeverity>
+				<aoeDamage>5</aoeDamage>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>minor</label>
+				<vomitMtbDays>1</vomitMtbDays>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>mild</label>
+				<vomitMtbDays>0.5</vomitMtbDays>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>Intense</label>
+				<vomitMtbDays>0.2</vomitMtbDays>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<label>severe</label>
+				<vomitMtbDays>0.2</vomitMtbDays>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AW_FleshEatingNanites</defName>
+		<label>corrosive mechanites</label>
+		<description>A swarm of mechanites is eating the target from both inside and out.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>0.01</initialSeverity>
+		<maxSeverity>100</maxSeverity>
+		<isBad>true</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-24</severityPerDay>
+			</li>
+			<!-- The custom comp: damage = damagePerSeverity * currentSeverity, every intervalTicks -->
+			<li Class="AncientChargedArms.HediffCompProperties_DOT">
+				<intervalTicks>120</intervalTicks>
+				<damagePerSeverity>4</damagePerSeverity>
+				<damageDef>AcidBurn</damageDef>
+				<moteDef>Mote_ToxicDamage</moteDef>
+				<!--<fleckDef>BlastEMP</fleckDef>-->
+				<moteScale>1</moteScale>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>minor</label>
+				<painOffset>0.1</painOffset>
+				<statFactors>
+					<ArmorRating_Sharp>1</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1</ArmorRating_Blunt>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>moderate</label>
+				<painOffset>0.15</painOffset>
+				<statFactors>
+					<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<label>severe</label>
+				<painOffset>0.2</painOffset>
+				<statFactors>
+					<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<label>extreme</label>
+				<painOffset>0.4</painOffset>
+				<statFactors>
+					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

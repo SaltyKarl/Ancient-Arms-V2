@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ancient Charged Mateba -->
+
+  <AW_ChargeMateba.label>远古电荷左轮</AW_ChargeMateba.label>
+  <AW_ChargeMateba.description>远古电荷左轮, 看似笨重但是下对齐的枪管大幅降低后座
+		[系统日志 ----]
+		[ID: 8755931D]
+		[录入时间 1-4-4060]
+		"这不是开玩笑吧？ 采购部选用了一把左轮作为制式武器？" "没办法，新的采购部头头是雪牛仔电影迷。"</AW_ChargeMateba.description>
+  <AW_ChargeMateba.tools.0.label>握把</AW_ChargeMateba.tools.0.label>
+  <AW_ChargeMateba.tools.1.label>枪口</AW_ChargeMateba.tools.1.label>
+
+
+  <!-- Ancient Charged PDW -->
+
+  <AW_ChargeSMG.label>远古电荷PDW</AW_ChargeSMG.label>
+  <AW_ChargeSMG.description>远古电荷PDW，曾经是机械混合部队机械师和渗透小队的制式装备。
+		[系统日志 7039]
+		[ID: 3837921D]
+		[录入时间 3-2-4063]不得不说这些机械的介入使我的生活简单很多，机械使我们过着衣来伸手饭来张口的生活，在这看似充满生机的都市里机械体承担了所有的工作很难看到人类的身影，这自动化何时为止呢？有时候我会想这能持续多久，如果。。。我说如果控制中枢出了什么问题，我们该做什么，能做什么？</AW_ChargeSMG.description>
+  <AW_ChargeSMG.tools.0.label>握把</AW_ChargeSMG.tools.0.label>
+  <AW_ChargeSMG.tools.1.label>枪口</AW_ChargeSMG.tools.1.label>
+
+
+  <!-- Ancient Charged BR -->
+
+  <AW_ChargeBR.label>远古电荷BR</AW_ChargeBR.label>
+  <AW_ChargeBR.description>远古电荷BR，曾经是机械混合部队步兵的制式装备。
+		[系统日志 5289]
+		[ID: 4041323G]
+		[录入时间 12-4-4062]
+		我爱死这些机械了，每次更新都有可见的功能改进，我的工作越来越简单，难以想象没有它们的生活，完全不能理解南部的那些傻瓜现在还拒绝这些中枢的恩赐。谁现在还能否认帝国的荣耀。一帮蠢货，也许这次中枢又会派出机械体，应该让他们学会儘管接受中枢的恩赐不要在乎繁枝细节。哈，得吧这句话记下来。</AW_ChargeBR.description>
+  <AW_ChargeBR.tools.0.label>枪托</AW_ChargeBR.tools.0.label>
+  <AW_ChargeBR.tools.1.label>枪管</AW_ChargeBR.tools.1.label>
+  <AW_ChargeBR.tools.2.label>枪口</AW_ChargeBR.tools.2.label>
+
+
+  <!-- Ancient Charged Six12 -->
+
+  <AW_ChargeCS.label>远古电荷霰弹枪</AW_ChargeCS.label>
+  <AW_ChargeCS.description>镇暴部队常用的电荷霰弹枪。</AW_ChargeCS.description>
+  <AW_ChargeCS.tools.0.label>枪托</AW_ChargeCS.tools.0.label>
+  <AW_ChargeCS.tools.1.label>枪管</AW_ChargeCS.tools.1.label>
+  <AW_ChargeCS.tools.2.label>枪口</AW_ChargeCS.tools.2.label>
+
+
+  <!-- Ancient Charged HMG -->
+
+  <AW_ChargeLMG.label>远古电荷HMG</AW_ChargeLMG.label>
+  <AW_ChargeLMG.description>远古电荷HMG，曾经是机械混合部队压制小队的制式装备。
+		[系统日志 1703]
+		[ID: 2029321C]
+		[录入时间 14-3-4059]新的战争用中枢协议的效果出人意料，行星登陆点东边的部落见到我们的机械体就逃，我们能省下更多人力用于南部的袭击。我之前怀疑过协议的有效性，但是我不能否定她。。。嗯协议的战果。我们的敌人在太阳升起之前就会溃不成军，不久这场战争就会结束，然后我们都可以凯旋而归。</AW_ChargeLMG.description>
+  <AW_ChargeLMG.tools.0.label>枪托</AW_ChargeLMG.tools.0.label>
+  <AW_ChargeLMG.tools.1.label>枪管</AW_ChargeLMG.tools.1.label>
+  <AW_ChargeLMG.tools.2.label>枪口</AW_ChargeLMG.tools.2.label>
+
+
+  <!-- Ancient Charged AMR -->
+
+  <AW_ChargeSR.label>远古电荷AMR</AW_ChargeSR.label>
+  <AW_ChargeSR.description>远古电荷AMR，曾经是机械混合部队渗透小队和神射手的制式装备。
+		[系统日志 11329]
+		[ID: 2098732L]
+		[录入时间 15-1-4064]中枢有什么地方出了大问题！我们失去了和所有前哨站的联系，机械体也不听指令！前方有炮火声，南方佬可能在向都市冲击！快派援军。</AW_ChargeSR.description>
+  <AW_ChargeSR.tools.0.label>枪托</AW_ChargeSR.tools.0.label>
+  <AW_ChargeSR.tools.1.label>枪管</AW_ChargeSR.tools.1.label>
+  <AW_ChargeSR.tools.2.label>枪口</AW_ChargeSR.tools.2.label>
+
+
+  <!-- Ancient HEAT Rocket Launcher -->
+
+  <AW_ChargeJavelin.label>Ancient HEAT Rocket Launcher</AW_ChargeJavelin.label>
+  <AW_ChargeJavelin.description>An Ancient anti tank rocket launcher, Fires two doomsday rockets at a time.</AW_ChargeJavelin.description>
+  <AW_ChargeJavelin.tools.0.label>barrel</AW_ChargeJavelin.tools.0.label>
+
+
+  <!-- Ancient Charged Autocannon -->
+
+  <AW_ChargeMKThreeOne.label>Ancient Charged Autocannon</AW_ChargeMKThreeOne.label>
+  <AW_ChargeMKThreeOne.description>An Ancient Autocannon, it was commonly mounted on IFVs, the onboard subpersona ai seems to hate stay in place, will refused to fire when mounted on stationary turrets.</AW_ChargeMKThreeOne.description>
+  <AW_ChargeMKThreeOne.tools.0.label>stock</AW_ChargeMKThreeOne.tools.0.label>
+  <AW_ChargeMKThreeOne.tools.1.label>barrel</AW_ChargeMKThreeOne.tools.1.label>
+  <AW_ChargeMKThreeOne.tools.2.label>muzzle</AW_ChargeMKThreeOne.tools.2.label>
+
+
+</LanguageData>

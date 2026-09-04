@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Recipes -->
+
+  <MakeAmmo_20x100mmAdvCharged.label>制作100发20x100mm电荷弹药</MakeAmmo_20x100mmAdvCharged.label>
+  <MakeAmmo_20x100mmAdvCharged.description>制作100发20x100mm电荷弹药</MakeAmmo_20x100mmAdvCharged.description>
+  <MakeAmmo_20x100mmAdvCharged.jobString>正在制作100发20x100mm电荷弹药</MakeAmmo_20x100mmAdvCharged.jobString>
+
+  <MakeAmmo_20x100mmAdvCharged_Ion.label>制作100发20x100mm离子电荷弹药</MakeAmmo_20x100mmAdvCharged_Ion.label>
+  <MakeAmmo_20x100mmAdvCharged_Ion.description>制作100发20x100mm离子电荷弹药</MakeAmmo_20x100mmAdvCharged_Ion.description>
+  <MakeAmmo_20x100mmAdvCharged_Ion.jobString>正在制作100发20x100mm离子电荷弹药</MakeAmmo_20x100mmAdvCharged_Ion.jobString>
+
+  <MakeAmmo_20x100mmAdvCharged_Anti.label>制作100发20x100mm反粒子电荷弹药</MakeAmmo_20x100mmAdvCharged_Anti.label>
+  <MakeAmmo_20x100mmAdvCharged_Anti.description>制作100发20x100mm反粒子电荷弹药</MakeAmmo_20x100mmAdvCharged_Anti.description>
+  <MakeAmmo_20x100mmAdvCharged_Anti.jobString>正在制作100发20x100mm反粒子电荷弹药</MakeAmmo_20x100mmAdvCharged_Anti.jobString>
+
+
+</LanguageData>

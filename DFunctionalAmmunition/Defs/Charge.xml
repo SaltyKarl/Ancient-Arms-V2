@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<ThingDef ParentName="BaseBulletCE">
+		<defName>Bullet_AW_ChargeJavelin_HEAT_TandemCharge</defName>
+		<thingClass>D_FuncAmmoLib.TandemCharge</thingClass>
+		<label>Charge Javelin TandemCharge</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.15</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>160</damageAmountBase>
+			<armorPenetrationSharp>400</armorPenetrationSharp>
+			<armorPenetrationBlunt>40</armorPenetrationBlunt>
+			<speed>100</speed>
+		</projectile>
+	</ThingDef>
+</Defs>

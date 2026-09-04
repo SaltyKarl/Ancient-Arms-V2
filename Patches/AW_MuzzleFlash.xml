@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Muzzle Flash</li>
+			<!--Name of mod to patch, from the about xml.-->
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeMateba"]</xpath>
+					<!--Gun Def.-->
+					<value>
+						<li Class="MuzzleFlash.MuzzleFlashProps">
+							<def>MF_ChargedMuzzleFalsh</def>
+							<!--Charged muzzle flash for spacer weapons.-->
+							<drawSize>(1,1)</drawSize>
+							<!--Size of the Muzzle flash.-->
+							<offsets>
+								<li>(0.25,0)</li>
+								<!--Where you want to put the flash. X and Y plane.-->
+							</offsets>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeSMG"]</xpath>
+					<!--Gun Def.-->
+					<value>
+						<li Class="MuzzleFlash.MuzzleFlashProps">
+							<def>MF_ChargedMuzzleFalsh</def>
+							<!--Charged muzzle flash for spacer weapons.-->
+							<drawSize>(1,1)</drawSize>
+							<!--Size of the Muzzle flash.-->
+							<offsets>
+								<li>(0.4,0)</li>
+								<!--Where you want to put the flash. X and Y plane.-->
+							</offsets>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeBR"]</xpath>
+					<value>
+						<li Class="MuzzleFlash.MuzzleFlashProps">
+							<def>MF_ChargedMuzzleFalsh</def>
+							<drawSize>(1,1)</drawSize>
+							<offsets>
+								<li>(0.5,0)</li>
+							</offsets>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeCS"]</xpath>
+					<value>
+						<li Class="MuzzleFlash.MuzzleFlashProps">
+							<def>MF_ChargedMuzzleFalsh</def>
+							<drawSize>(2,1)</drawSize>
+							<offsets>
+								<li>(0.75,0)</li>
+							</offsets>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeLMG"]</xpath>
+					<value>
+						<li Class="MuzzleFlash.MuzzleFlashProps">
+							<def>MF_ChargedMuzzleFalsh</def>
+							<drawSize>(2,1)</drawSize>
+							<offsets>
+								<li>(0.8,0)</li>
+							</offsets>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeSR"]</xpath>
+					<value>
+						<li Class="MuzzleFlash.MuzzleFlashProps">
+							<def>MF_ChargedMuzzleFalsh</def>
+							<drawSize>(3,1)</drawSize>
+							<offsets>
+								<li>(0.7,0)</li>
+							</offsets>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeMKThreeOne"]</xpath>
+					<value>
+						<li Class="MuzzleFlash.MuzzleFlashProps">
+							<def>MF_ChargedMuzzleFalsh</def>
+							<drawSize>(3,1)</drawSize>
+							<offsets>
+								<li>(0.90,0)</li>
+							</offsets>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

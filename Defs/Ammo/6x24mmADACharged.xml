@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_6x24mm_ADACharged</defName>
+		<label>6x24mm Adaptive Charged</label>
+		<ammoTypes>
+			<Ammo_6x22mmCharged>Bullet_6x22mmCharged</Ammo_6x22mmCharged>
+			<Ammo_6x24mmCharged>Bullet_6x24mmCharged</Ammo_6x24mmCharged>
+			<Ammo_6x24mmCharged_NE>Bullet_6x24mmCharged_NE</Ammo_6x24mmCharged_NE>
+			<Ammo_6x24mmCharged_CM>Bullet_6x24mmCharged_CM</Ammo_6x24mmCharged_CM>
+			<Ammo_6x24mmCharged_AP>Bullet_6x24mmCharged_AP</Ammo_6x24mmCharged_AP>
+			<Ammo_6x24mmCharged_Ion>Bullet_6x24mmCharged_Ion</Ammo_6x24mmCharged_Ion>
+		</ammoTypes>
+		<similarTo>AmmoSet_ChargedRifle</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="6x24mmChargedBase">
+		<defName>Ammo_6x24mmCharged_NE</defName>
+		<label>6x24mm Charged (N.E)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Embed/S</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_NanoExplosive</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="6x24mmChargedBase">
+		<defName>Ammo_6x24mmCharged_CM</defName>
+		<label>6x24mm Charged (NANO)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Acid/S</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_FleshEatingNanites</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="Base6x24mmChargedBullet">
+		<defName>Bullet_6x24mmCharged_NE</defName>
+		<label>6x24mm Charged bullet (N.E)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>AW_NanoExplosive</damageDef>
+			<damageAmountBase>4</damageAmountBase>
+			<armorPenetrationSharp>22.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.6</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base6x24mmChargedBullet">
+		<defName>Bullet_6x24mmCharged_CM</defName>
+		<label>6x24mm Charged bullet (NANO)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>AW_AcidMechanites</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_6x24mmCharged_NE</defName>
+		<label>make 6x24mm Charged (N.E) cartridge x400</label>
+		<description>Craft 400 6x24mm Charged (N.E) cartridges.</description>
+		<jobString>Making 6x24mm Charged (N.E) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_6x24mmCharged_NE>400</Ammo_6x24mmCharged_NE>
+		</products>
+		<workAmount>7400</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_6x24mmCharged_CM</defName>
+		<label>make 6x24mm Charged (NANO) cartridge x400</label>
+		<description>Craft 400 6x24mm Charged (NANO) cartridges.</description>
+		<jobString>Making 6x24mm Charged (NANO) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>6</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_6x24mmCharged_CM>400</Ammo_6x24mmCharged_CM>
+		</products>
+		<workAmount>7400</workAmount>
+	</RecipeDef>
+
+</Defs>

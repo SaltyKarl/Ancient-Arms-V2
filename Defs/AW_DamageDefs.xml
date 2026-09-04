@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<DamageDef ParentName="Bullet">
+		<defName>AW_NanoExplosive</defName>
+		<label>nano embed explosive</label>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<additionalHediffs>
+			<li>
+				<hediff>AW_NanoExplosive</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+	<DamageDef ParentName="Flame">
+		<defName>AW_AcidMechanites</defName>
+		<label>corrosive mechanites</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<armorCategory>Heat</armorCategory>
+		<defaultArmorPenetration>2</defaultArmorPenetration>
+		<hediff>AcidBurn</hediff>
+		<scaleDamageToBuildingsBasedOnFlammability>false</scaleDamageToBuildingsBasedOnFlammability>
+		<additionalHediffs>
+			<li>
+				<hediff>AW_FleshEatingNanites</hediff>
+				<severityPerDamageDealt>1</severityPerDamageDealt>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+	</DamageDef>
+
+</Defs>

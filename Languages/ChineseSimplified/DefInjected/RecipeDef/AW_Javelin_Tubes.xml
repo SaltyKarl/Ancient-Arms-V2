@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- RECIPES -->
+
+  <MakeAmmo_AW_ChargeJavelin_HEAT.label>制作5根电荷标枪</MakeAmmo_AW_ChargeJavelin_HEAT.label>
+  <MakeAmmo_AW_ChargeJavelin_HEAT.description>制作5根电荷标枪</MakeAmmo_AW_ChargeJavelin_HEAT.description>
+  <MakeAmmo_AW_ChargeJavelin_HEAT.jobString>正在制作5根电荷标枪</MakeAmmo_AW_ChargeJavelin_HEAT.jobString>
+
+
+</LanguageData>

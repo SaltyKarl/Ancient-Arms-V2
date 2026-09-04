@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/carl/.local/share/Steam/steamapps/common/RimWorld/Mods/Ancient Arms V2/Source/AncientChargedArms.csproj": {}
+  },
+  "projects": {
+    "/home/carl/.local/share/Steam/steamapps/common/RimWorld/Mods/Ancient Arms V2/Source/AncientChargedArms.csproj": {
+      "version": "2.0.0",
+      "restore": {
+        "projectUniqueName": "/home/carl/.local/share/Steam/steamapps/common/RimWorld/Mods/Ancient Arms V2/Source/AncientChargedArms.csproj",
+        "projectName": "AncientChargedArms",
+        "projectPath": "/home/carl/.local/share/Steam/steamapps/common/RimWorld/Mods/Ancient Arms V2/Source/AncientChargedArms.csproj",
+        "packagesPath": "/home/carl/.nuget/packages/",
+        "outputPath": "/home/carl/.local/share/Steam/steamapps/common/RimWorld/Mods/Ancient Arms V2/Source/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/carl/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "framework": "net48",
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net48": {
+          "framework": "net48",
+          "targetAlias": "net48",
+          "dependencies": {
+            "Krafs.Publicizer": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Krafs.Rimworld.Ref": {
+              "target": "Package",
+              "version": "[1.6.4633, )",
+              "generatePathProperty": true
+            },
+            "Lib.Harmony": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[2.3.6, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

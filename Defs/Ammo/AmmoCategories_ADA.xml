@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>AW_NanoExplosive</defName>
+		<label>nanite explosive</label>
+		<labelShort>N.E</labelShort>
+		<description>designed to inject mechanites that make a explosive mixture inside target, detonating when the target is downed.</description>
+		<advanced>true</advanced>
+	</CombatExtended.AmmoCategoryDef>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>AW_FleshEatingNanites</defName>
+		<label>corrosive mechanites</label>
+		<labelShort>NANO</labelShort>
+		<description>Mostly just a tube filled with mechanites that will eat though almost anything, drastically lower both damage and armor penetration.</description>
+		<advanced>true</advanced>
+	</CombatExtended.AmmoCategoryDef>
+
+	<CombatExtended.AmmoCategoryDef>
+		<defName>AW_Anti</defName>
+		<label>Charged(Anti)</label>
+		<advanced>true</advanced>
+		<description>Antigrain tipped Mech Charged munition.</description>
+	</CombatExtended.AmmoCategoryDef>
+
+</Defs>

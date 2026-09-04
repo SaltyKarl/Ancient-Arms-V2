@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ammo -->
+
+  <Ammo_12x64mmAdvCharged_Anti.label>12x64mm反粒子电荷弹药</Ammo_12x64mmAdvCharged_Anti.label>
+  <Ammo_12x64mmAdvCharged_Ion.label>12x64mm离子电荷弹药</Ammo_12x64mmAdvCharged_Ion.label>
+
+
+  <!-- Projectiles -->
+
+  <Bullet_12x64mmAdvCharged_Anti.label>反粒子电荷子弹</Bullet_12x64mmAdvCharged_Anti.label>
+  <Bullet_12x64mmAdvCharged_Ion.label>离子电荷子弹</Bullet_12x64mmAdvCharged_Ion.label>
+
+
+</LanguageData>

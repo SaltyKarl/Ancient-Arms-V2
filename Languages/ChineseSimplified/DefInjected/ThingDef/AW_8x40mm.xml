@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Ammo -->
+
+  <Ammo_8x40mmAdvCharged_Ion.label>8x40mm离子电荷弹药</Ammo_8x40mmAdvCharged_Ion.label>
+  <Ammo_8x40mmAdvCharged_Tox.label>8x40mm毒素电荷弹药</Ammo_8x40mmAdvCharged_Tox.label>
+  <Ammo_8x40mmAdvCharged_Anti.label>8x40mm反粒子电荷弹药</Ammo_8x40mmAdvCharged_Anti.label>
+
+
+  <!-- Projectiles -->
+
+  <Bullet_8x40mmAdvCharged_Ion.label>离子电荷子弹</Bullet_8x40mmAdvCharged_Ion.label>
+  <Bullet_8x40mmAdvCharged_Tox.label>反粒子电荷子弹</Bullet_8x40mmAdvCharged_Tox.label>
+  <Bullet_8x40mmAdvCharged_Anti.label>毒素电荷子弹</Bullet_8x40mmAdvCharged_Anti.label>
+
+
+</LanguageData>

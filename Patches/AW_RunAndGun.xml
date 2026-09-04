@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!-- Weapons that were flagged AllowWithRunAndGun=false by the old CE patch -->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>RunAndGun</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeSR"]</xpath>
+					<value>
+						<li Class="RunAndGun.DefModExtension_SettingDefaults">
+							<weaponForbidden>true</weaponForbidden>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeLMG"]</xpath>
+					<value>
+						<li Class="RunAndGun.DefModExtension_SettingDefaults">
+							<weaponForbidden>true</weaponForbidden>
+						</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAddModExtension">
+					<xpath>Defs/ThingDef[defName="AW_ChargeMKThreeOne"]</xpath>
+					<value>
+						<li Class="RunAndGun.DefModExtension_SettingDefaults">
+							<weaponForbidden>true</weaponForbidden>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
