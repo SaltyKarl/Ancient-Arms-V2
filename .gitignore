@@ -5,7 +5,9 @@ AssembliesCore/*.dll
 */Thumbs.db
 /Source/.vs/*
 Source/obj/*
-Source/obj/Debug/*
+Source/obj/Debug/*.txt
+Source/obj/Debug/*.cache
+Source/obj/Debug/*.dll
 Source/bin/*
 /Source/*/*.csproj.user
 .vscode
