@@ -1,5 +1,4 @@
-*/.idea
-/Source/Properties/*
-/Source/obj/*
-/Source/obj/Debug
-*.cache
+**/.idea
+/Source/Properties/**
+/Source/obj/**
+**/*.cache
