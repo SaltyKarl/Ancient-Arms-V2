@@ -6,7 +6,7 @@ AssembliesCore/*.dll
 /Source/.vs/*
 Source/obj/*
 Source/obj/Debug/*.txt
-Source/obj/Debug/*.cache
+*.cache
 Source/obj/Debug/*.dll
 Source/bin/*
 /Source/*/*.csproj.user
