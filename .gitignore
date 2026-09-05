@@ -1,13 +1,9 @@
-AssembliesCompat/*.dll
-AssembliesCore/*.dll
 *.suo
 *.cache
 */Thumbs.db
 /Source/.vs/*
 Source/obj/*
-Source/obj/Debug/*.txt
 *.cache
-Source/obj/Debug/*.dll
 Source/bin/*
 /Source/*/*.csproj.user
 .vscode
