@@ -3,6 +3,7 @@
 	<Excluded>
 		<exclude>.git</exclude>
 		<exclude>Source</exclude>
+		<exclude>Preview</exclude>
 		<exclude>.gitattributes</exclude>
 		<exclude>Textures/Unused</exclude>
 	</Excluded>

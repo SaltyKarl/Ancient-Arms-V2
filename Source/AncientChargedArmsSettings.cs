@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Reflection;
 using HarmonyLib;
 using UnityEngine;
@@ -40,6 +41,8 @@ public class AncientChargedArmsSettings : ModSettings
         if (!ResolveCe())
         {
             listing.Label("RequiresCombatExtended".Translate());
+            listing.End();
+            return;
         }
 
         // Nanite charge ammo (N.E + NANO)
@@ -58,6 +61,10 @@ public class AncientChargedArmsSettings : ModSettings
         if (listing.ButtonText("RestoreDefaults".Translate()))
         {
             RestoreDefaults();
+            // Re-apply the reset chances so the defs update immediately.
+            SetAmmoClassChance("AW_NanoExplosive", NaniteChargeAmmoSpawnChance);
+            SetAmmoClassChance("AW_FleshEatingNanites", NaniteChargeAmmoSpawnChance);
+            SetAmmoClassChance("AW_Anti", AntigrainChargeAmmoSpawnChance);
         }
 
         listing.End();
@@ -84,25 +91,35 @@ public class AncientChargedArmsSettings : ModSettings
     private const string AmmoDefTypeName = "CombatExtended.AmmoDef";
     private const string AmmoClassFieldName = "ammoClass";
 
+    // Reflection handles, resolved once.
     private static FieldInfo _ammoClassField;
-    private static IEnumerable _allAmmoDefs;
     private static bool _ceResolved;
+
+    // Ammo defs grouped by class, built lazily and cached so the settings
+    // window (which redraws every frame) never has to walk every ammo def.
+    private static readonly Dictionary<string, List<ThingDef>> _ammoByClass = new();
 
     // Hits every ammo def in the class, whatever caliber it happens to be.
     private static void SetAmmoClassChance(string ammoClassName, float chancePercent)
     {
         if (!ResolveCe())
-        {
             return;
+
+        if (!_ammoByClass.TryGetValue(ammoClassName, out List<ThingDef> list))
+        {
+            list = new List<ThingDef>();
+            Type defType = _ammoClassField.DeclaringType;
+            foreach (object ammoDef in AllDefsOfType(defType))
+            {
+                if (_ammoClassField.GetValue(ammoDef) is Def ammoClass && ammoClass.defName == ammoClassName)
+                    list.Add((ThingDef)ammoDef);
+            }
+            _ammoByClass[ammoClassName] = list;
         }
 
-        foreach (object ammoDef in _allAmmoDefs)
-        {
-            if (_ammoClassField.GetValue(ammoDef) is Def ammoClass && ammoClass.defName == ammoClassName)
-            {
-                ((ThingDef)ammoDef).generateAllowChance = chancePercent / 100f;
-            }
-        }
+        float chance = chancePercent / 100f;
+        foreach (ThingDef def in list)
+            def.generateAllowChance = chance;
     }
 
     // No CE loaded, nothing to touch.
@@ -113,10 +130,9 @@ public class AncientChargedArmsSettings : ModSettings
             _ceResolved = true;
             Type ammoDefType = AccessTools.TypeByName(AmmoDefTypeName);
             _ammoClassField = ammoDefType == null ? null : AccessTools.Field(ammoDefType, AmmoClassFieldName);
-            _allAmmoDefs = ammoDefType == null ? null : AllDefsOfType(ammoDefType);
         }
 
-        return _ammoClassField != null && _allAmmoDefs != null;
+        return _ammoClassField != null;
     }
 
     private static IEnumerable AllDefsOfType(Type defType)

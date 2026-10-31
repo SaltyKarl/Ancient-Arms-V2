@@ -22,7 +22,7 @@
 		<defName>Ammo_6x24mmCharged_NE</defName>
 		<label>6x24mm Charged (N.E)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Charged/Embed/S</texPath>
+			<texPath>Things/Ammo/Charged/Embed/M</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>AW_NanoExplosive</ammoClass>
@@ -33,7 +33,7 @@
 		<defName>Ammo_6x24mmCharged_CM</defName>
 		<label>6x24mm Charged (NANO)</label>
 		<graphicData>
-			<texPath>Things/Ammo/Charged/Acid/S</texPath>
+			<texPath>Things/Ammo/Charged/Acid/M</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<ammoClass>AW_FleshEatingNanites</ammoClass>
@@ -46,10 +46,15 @@
 		<defName>Bullet_6x24mmCharged_NE</defName>
 		<label>6x24mm Charged bullet (N.E)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>AW_NanoExplosive</damageDef>
-			<damageAmountBase>4</damageAmountBase>
-			<armorPenetrationSharp>22.5</armorPenetrationSharp>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>15</armorPenetrationSharp>
 			<armorPenetrationBlunt>25.6</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>AW_NanoExplosive</def>
+					<amount>4</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 
@@ -57,8 +62,15 @@
 		<defName>Bullet_6x24mmCharged_CM</defName>
 		<label>6x24mm Charged bullet (NANO)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>AW_AcidMechanites</damageDef>
-			<damageAmountBase>2</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>15</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.6</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>AW_AcidMechanites</def>
+					<amount>4</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 

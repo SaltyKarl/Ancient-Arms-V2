@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+	<ThingDef Name="AW_UltraRangedWeaponMakeable" ParentName="BaseMakeableGun" Abstract="True">
+		<techLevel>Ultra</techLevel>
+		<generateCommonality>0.10</generateCommonality>
+		<weaponTags>
+			<li>Ultratech</li>
+		</weaponTags>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>12</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
 	<!-- ==================== Ancient Charged Mateba ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeMateba</defName>
 		<label>Ancient Charged Revolver</label>
-		<description>An Ancient Charge Revolver, Seems unwieldy but the bottom aligned barrel greatly helps with recoil.[SYSTEM LOG ----]
-			[ID: 8755931D]
-
-			[LAST ENTRY 1-4-4060]
-			"Is this a joke? they used a revolver pattern for the standed issue sidearm?" "Yeah, the new head of military acquisition is a muffaloboy movie enthusiast."</description>
+		<description>An Ancient Charge Revolver, Seems unwieldy but the bottom aligned barrel greatly helps with recoil.</description>
 		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_Mateba</texPath>
@@ -27,24 +43,25 @@
 			<WorkToMake>17500</WorkToMake>
 			<Mass>2</Mass>
 			<Bulk>2.50</Bulk>
-			<SwayFactor>0.45</SwayFactor>
 			<ShotSpread>0.16</ShotSpread>
+			<SwayFactor>1.10</SwayFactor>
 			<SightsEfficiency>1.25</SightsEfficiency>
 			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
-			<Steel>10</Steel>
 			<Plasteel>15</Plasteel>
 			<Chemfuel>5</Chemfuel>
-			<ComponentIndustrial>1</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<verbs>
 			<li Class="CombatExtended.VerbPropertiesCE">
 				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<recoilAmount>2.25</recoilAmount>
 				<hasStandardCommand>True</hasStandardCommand>
 				<defaultProjectile>Bullet_6x24mmCharged</defaultProjectile>
 				<warmupTime>0.5</warmupTime>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
 				<aimingLineMote>AW_Mote_LaserPointer_LineAim</aimingLineMote>
 				<aimingLineMoteFixedLength>4</aimingLineMoteFixedLength>
 				<aimingTargetMote>AW_Mote_LaserPointer_Target</aimingTargetMote>
@@ -57,7 +74,7 @@
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
 				<magazineSize>6</magazineSize>
-				<reloadTime>2.0</reloadTime>
+				<reloadTime>3.0</reloadTime>
 				<ammoSet>AmmoSet_6x24mm_ADACharged</ammoSet>
 			</li>
 			<li Class="CombatExtended.CompProperties_FireModes">
@@ -68,7 +85,6 @@
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<weaponTags>
-			<li>SpacerGun</li>
 			<li>CE_Sidearm</li>
 			<li>CE_AI_BROOM</li>
 			<li>CE_OneHandedWeapon</li>
@@ -113,19 +129,15 @@
 
 	<!-- ==================== Ancient Charged PDW ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeSMG</defName>
 		<label>Ancient Charged PDW</label>
-		<description>An Ancient PDW, it was commonly carried by mech commanders and infiltration units. [SYSTEM LOG 7039]
-			[ID: 3837921D]
-
-			[LAST ENTRY 2-3-4063]
-			I must admit I enjoy having the machines around, but where does this end? It seems like there's no people at all anymore. While we're all stuck inside our homes the droids perform every task in the city. Sometimes I wonder how long this can last. What if something... what if something in the nexus goes wrong? What should we do, what can we do?</description>
+		<description>An Ancient PDW, it was commonly carried by mech commanders and infiltration units.</description>
 		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_SMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>0.75</drawSize>
+			<drawSize>0.95</drawSize>
 		</graphicData>
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<weaponClasses>
@@ -169,7 +181,7 @@
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
 				<magazineSize>40</magazineSize>
-				<reloadTime>2.5</reloadTime>
+				<reloadTime>3.5</reloadTime>
 				<ammoSet>AmmoSet_6x24mm_ADACharged</ammoSet>
 			</li>
 			<li Class="CombatExtended.CompProperties_FireModes">
@@ -226,14 +238,10 @@
 
 	<!-- ==================== Ancient Charged BR ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeBR</defName>
 		<label>Ancient Charged BR</label>
-		<description>An Ancient BR, it was commonly issued to mech assisted infantry. [SYSTEM LOG: 5289]
-			[ID: 4041323G]
-
-			[LAST ENTRY 4-12-4062]
-			I love these things! Every update these little droids get better, keeps making my job easier. I can't even imagine living without them anymore. I will never understand why those Southern fools continue to fight nexus's gift. How can they still deny the Empire's glory even after all this time? Damn fools, maybe the commander will send the machines again. Should teach them to look a gift droid in the mouth. Ha! That's a good one! I've got to remember that.</description>
+		<description>An Ancient BR, it was commonly issued to mech assisted infantry.</description>
 		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_BR</texPath>
@@ -281,7 +289,7 @@
 		</verbs>
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
-				<magazineSize>24</magazineSize>
+				<magazineSize>21</magazineSize>
 				<reloadTime>3.7</reloadTime>
 				<ammoSet>AmmoSet_8x35mm_ADACharged</ammoSet>
 			</li>
@@ -347,7 +355,7 @@
 
 	<!-- ==================== Ancient Charged ChainShotgun ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeCS</defName>
 		<label>Ancient Charged ChainShotgun</label>
 		<description>An Ancient charged full auto ChainShotgun, it was commonly issued to mech assisted shock troops.</description>
@@ -355,7 +363,7 @@
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_612</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>1.0</drawSize>
+			<drawSize>1.4</drawSize>
 		</graphicData>
 		<soundInteract>Interact_Shotgun</soundInteract>
 		<weaponClasses>
@@ -363,18 +371,18 @@
 		</weaponClasses>
 		<statBases>
 			<WorkToMake>67500</WorkToMake>
-			<Mass>6</Mass>
-			<Bulk>11.50</Bulk>
-			<SwayFactor>1.25</SwayFactor>
+			<Mass>10</Mass>
+			<Bulk>15.50</Bulk>
+			<SwayFactor>1.5</SwayFactor>
 			<ShotSpread>0.10</ShotSpread>
 			<SightsEfficiency>1.15</SightsEfficiency>
 			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
-			<Steel>20</Steel>
+			<Steel>60</Steel>
 			<Plasteel>80</Plasteel>
-			<Chemfuel>10</Chemfuel>
-			<ComponentIndustrial>2</ComponentIndustrial>
+			<Chemfuel>30</Chemfuel>
+			<ComponentIndustrial>4</ComponentIndustrial>
 			<ComponentSpacer>1</ComponentSpacer>
 		</costList>
 		<verbs>
@@ -382,7 +390,8 @@
 				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
 				<hasStandardCommand>True</hasStandardCommand>
 				<defaultProjectile>Bullet_12GaugeCharged</defaultProjectile>
-				<burstShotCount>1</burstShotCount>
+				<burstShotCount>3</burstShotCount>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
 				<warmupTime>0.4</warmupTime>
 				<aimingLineMote>AW_Mote_LaserPointer_LineAim</aimingLineMote>
 				<aimingLineMoteFixedLength>4</aimingLineMoteFixedLength>
@@ -391,13 +400,14 @@
 				<soundCast>Shot_ChargeRifle</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
+				<recoilAmount>2</recoilAmount>
 			</li>
 		</verbs>
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
-				<magazineSize>6</magazineSize>
-				<reloadTime>3</reloadTime>
-				<ammoSet>AmmoSet_12GaugeCharged</ammoSet>
+				<magazineSize>18</magazineSize>
+				<reloadTime>5</reloadTime>
+				<ammoSet>AmmoSet_12Gauge_ADACharged</ammoSet>
 			</li>
 			<li Class="CombatExtended.CompProperties_FireModes">
 				<aiAimMode>Snapshot</aiAimMode>
@@ -458,14 +468,10 @@
 
 	<!-- ==================== Ancient Charged HMG ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeLMG</defName>
-		<label>Ancient Charged HMG</label>
-		<description>An Ancient HMG, it was commonly issued to mech assisted infantry squads. [SYSTEM LOG: 1703]
-			[ID: 2029321C]
-
-			[LAST ENTRY 3-14-4059]
-			The new war protocol for the nexus is performing better than we anticipated. With the tribes fleeing our droids East of Planetary landing point we'll be able to spare more fighters for the Southern assault. I had my doubts of her... sorry the protocol's effectiveness, but even I can not deny the results. Our enemies will be routed before the sun is up. Soon this war will be over and we can all go home.</description>
+		<label>Ancient Charged Minigun</label>
+		<description>An Ancient Minigun, it was commonly issued to mech assisted infantry squads.</description>
 		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_HMG</texPath>
@@ -592,14 +598,10 @@
 
 	<!-- ==================== Ancient Charged AMR ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeSR</defName>
 		<label>Ancient Charged AMR</label>
-		<description>An Ancient AMR, it was commonly issued to mech assisted sharpshooters and infiltration units. [SYSTEM LOG: 11329]
-			[ID: 2098732L]
-
-			[LAST ENTRY 1-15-4064]
-			Something in the nexus has gone horribly wrong! We've lost all contact with the forward station and the droids are not responding to commands! There's gunfire on the front. I think the Southies are making a push for the city! Send help!</description>
+		<description>An Ancient AMR, it was commonly issued to mech assisted sharpshooters and infiltration units.</description>
 		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_AMR</texPath>
@@ -715,7 +717,7 @@
 
 	<!-- ==================== Ancient HEAT Rocket Launcher ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeJavelin</defName>
 		<label>Ancient HEAT Rocket Launcher</label>
 		<description>An Ancient anti tank rocket launcher, Fires two doomsday rockets at a time.</description>
@@ -812,7 +814,7 @@
 
 	<!-- ==================== Ancient Charged Autocannon ==================== -->
 
-	<ThingDef ParentName="BaseHumanMakeableGun">
+	<ThingDef ParentName="AW_UltraRangedWeaponMakeable">
 		<defName>AW_ChargeMKThreeOne</defName>
 		<label>Ancient Charged Autocannon</label>
 		<description>An Ancient Autocannon, it was commonly mounted on IFVs, the onboard subpersona ai seems to hate stay in place, will refused to fire when mounted on stationary turrets.</description>

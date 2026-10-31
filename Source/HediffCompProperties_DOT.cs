@@ -14,9 +14,13 @@ public class HediffCompProperties_DOT : HediffCompProperties
     // Ticks between damage applications.
     public int intervalTicks = 120;
 
-    // Damage dealt each tick = damagePerSeverity * parent.Severity.
+    // Damage dealt each tick at severity 1.
     // When AoE is enabled (aoeDamageDef set), DoT is OFF by default unless this is > 0.
     public float damagePerSeverity = 1f;
+
+    // Exponent of the DoT power curve: damagePerTick = damagePerSeverity * severity^damagePerSeverityExponent.
+    // 1 = linear, < 1 = diminishing returns, 0 = flat damage.
+    public float damagePerSeverityExponent = 1f;
 
     // Damage type applied. Falls back to Bite if not set in XML.
     public DamageDef damageDef;
@@ -36,13 +40,15 @@ public class HediffCompProperties_DOT : HediffCompProperties
     // Base radius of the AoE explosion (in cells) at severity 1.
     public float aoeRadius = 3f;
 
-    // Radius multiplier per unit of severity: finalRadius = aoeRadius * (1 + aoeRadiusPerSeverity * (severity - 1)).
-    public float aoeRadiusPerSeverity = 0f;
+    // Exponent of the AoE radius power curve: finalRadius = aoeRadius * severity^aoeRadiusExponent.
+    // 1 = linear, < 1 = diminishing returns, 0 = flat radius.
+    public float aoeRadiusExponent = 1f;
 
     // Base damage dealt to each pawn caught in the AoE at severity 1.
     public float aoeDamage = 10f;
 
-    // Damage multiplier per unit of severity: finalDamage = aoeDamage * (1 + aoeDamagePerSeverity * (severity - 1)).
-    public float aoeDamagePerSeverity = 0f;
+    // Exponent of the AoE damage power curve: finalDamage = aoeDamage * severity^aoeDamageExponent.
+    // 1 = linear, < 1 = diminishing returns, 0 = flat damage.
+    public float aoeDamageExponent = 1f;
 
 }

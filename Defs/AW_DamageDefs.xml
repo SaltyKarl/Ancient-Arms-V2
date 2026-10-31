@@ -5,10 +5,11 @@
 		<defName>AW_NanoExplosive</defName>
 		<label>nano embed explosive</label>
 		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<armorCategory>Heat</armorCategory>
 		<additionalHediffs>
 			<li>
 				<hediff>AW_NanoExplosive</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
+				<severityPerDamageDealt>0.3</severityPerDamageDealt>
 				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
 			</li>
 		</additionalHediffs>
@@ -25,7 +26,7 @@
 		<additionalHediffs>
 			<li>
 				<hediff>AW_FleshEatingNanites</hediff>
-				<severityPerDamageDealt>1</severityPerDamageDealt>
+				<severityPerDamageDealt>0.05</severityPerDamageDealt>
 				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
 			</li>
 		</additionalHediffs>

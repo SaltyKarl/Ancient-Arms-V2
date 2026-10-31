@@ -56,10 +56,15 @@
 		<defName>Bullet_20x105mmCharged_NE</defName>
 		<label>20x105mm Charged bullet (N.E)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>AW_NanoExplosive</damageDef>
-			<damageAmountBase>20</damageAmountBase>
+			<damageAmountBase>58</damageAmountBase>
 			<armorPenetrationSharp>40</armorPenetrationSharp>
 			<armorPenetrationBlunt>1210</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>AW_NanoExplosive</def>
+					<amount>22</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 
@@ -67,8 +72,15 @@
 		<defName>Bullet_20x105mmCharged_CM</defName>
 		<label>20x105mm Charged bullet (NANO)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>AW_AcidMechanites</damageDef>
-			<damageAmountBase>15</damageAmountBase>
+			<damageAmountBase>58</damageAmountBase>
+			<armorPenetrationSharp>40</armorPenetrationSharp>
+			<armorPenetrationBlunt>1210</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>AW_AcidMechanites</def>
+					<amount>22</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 

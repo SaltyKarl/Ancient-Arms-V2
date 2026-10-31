@@ -58,10 +58,15 @@
 		<defName>Bullet_12x72mmCharged_NE</defName>
 		<label>12x72mm Charged bullet (N.E)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>AW_NanoExplosive</damageDef>
-			<damageAmountBase>6</damageAmountBase>
-			<armorPenetrationSharp>24</armorPenetrationSharp>
-			<armorPenetrationBlunt>57.6</armorPenetrationBlunt>
+			<damageAmountBase>31</damageAmountBase>
+			<armorPenetrationSharp>30</armorPenetrationSharp>
+			<armorPenetrationBlunt>324</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>AW_NanoExplosive</def>
+					<amount>12</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 
@@ -69,8 +74,15 @@
 		<defName>Bullet_12x72mmCharged_CM</defName>
 		<label>12x72mm Charged bullet (NANO)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageDef>AW_AcidMechanites</damageDef>
-			<damageAmountBase>5</damageAmountBase>
+			<damageAmountBase>31</damageAmountBase>
+			<armorPenetrationSharp>30</armorPenetrationSharp>
+			<armorPenetrationBlunt>324</armorPenetrationBlunt>
+			<secondaryDamage>
+				<li>
+					<def>AW_AcidMechanites</def>
+					<amount>12</amount>
+				</li>
+			</secondaryDamage>
 		</projectile>
 	</ThingDef>
 
@@ -135,7 +147,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_12x72mmCharged_NE>400</Ammo_12x72mmCharged_NE>
+			<Ammo_12x72mmCharged_NE>200</Ammo_12x72mmCharged_NE>
 		</products>
 		<workAmount>22000</workAmount>
 	</RecipeDef>
@@ -179,7 +191,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Ammo_12x72mmCharged_CM>400</Ammo_12x72mmCharged_CM>
+			<Ammo_12x72mmCharged_CM>200</Ammo_12x72mmCharged_CM>
 		</products>
 		<workAmount>22000</workAmount>
 	</RecipeDef>

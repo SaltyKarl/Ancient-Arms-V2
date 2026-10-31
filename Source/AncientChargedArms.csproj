@@ -11,7 +11,7 @@
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<OutputPath>..\Common\Assemblies\</OutputPath>
+		<OutputPath>..\Assemblies\</OutputPath>
 		<DebugType>embedded</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -19,7 +19,7 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<OutputPath>..\Common\Assemblies\</OutputPath>
+		<OutputPath>..\Assemblies\</OutputPath>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<DebugType>none</DebugType>
 		<DebugSymbols>false</DebugSymbols>

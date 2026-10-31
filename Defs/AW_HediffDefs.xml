@@ -7,24 +7,25 @@
 		<description>A swarm of mechanites is making an explosive mixture inside</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<initialSeverity>0.01</initialSeverity>
-		<maxSeverity>100</maxSeverity>
+		<maxSeverity>25</maxSeverity>
 		<isBad>true</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-48</severityPerDay>
 			</li>
-			<!-- The custom comp: damage = damagePerSeverity * currentSeverity, every intervalTicks -->
+			<!-- The custom comp: damage = damagePerSeverity * currentSeverity^damagePerSeverityExponent, every intervalTicks -->
 			<li Class="AncientChargedArms.HediffCompProperties_DOT">
 				<intervalTicks>600</intervalTicks>
 				<damageDef>AcidBurn</damageDef>
 				<damagePerSeverity>1</damagePerSeverity>
+				<damagePerSeverityExponent>1</damagePerSeverityExponent>
 				<moteDef>Mote_ToxicDamage</moteDef>
 				<moteScale>1</moteScale>
 				<aoeDamageDef>Bomb</aoeDamageDef>
 				<aoeRadius>5</aoeRadius>
-				<aoeRadiusPerSeverity>0.5</aoeRadiusPerSeverity>
-				<aoeDamagePerSeverity>1</aoeDamagePerSeverity>
-				<aoeDamage>5</aoeDamage>
+				<aoeRadiusExponent>0.20</aoeRadiusExponent>
+				<aoeDamage>20</aoeDamage>
+				<aoeDamageExponent>0.85</aoeDamageExponent>
 			</li>
 		</comps>
 		<stages>
@@ -57,16 +58,17 @@
 		<description>A swarm of mechanites is eating the target from both inside and out.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<initialSeverity>0.01</initialSeverity>
-		<maxSeverity>100</maxSeverity>
+		<maxSeverity>25</maxSeverity>
 		<isBad>true</isBad>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
-				<severityPerDay>-24</severityPerDay>
+				<severityPerDay>-48</severityPerDay>
 			</li>
-			<!-- The custom comp: damage = damagePerSeverity * currentSeverity, every intervalTicks -->
+			<!-- The custom comp: damage = damagePerSeverity * currentSeverity^damagePerSeverityExponent, every intervalTicks -->
 			<li Class="AncientChargedArms.HediffCompProperties_DOT">
 				<intervalTicks>120</intervalTicks>
 				<damagePerSeverity>4</damagePerSeverity>
+				<damagePerSeverityExponent>0.65</damagePerSeverityExponent>
 				<damageDef>AcidBurn</damageDef>
 				<moteDef>Mote_ToxicDamage</moteDef>
 				<!--<fleckDef>BlastEMP</fleckDef>-->

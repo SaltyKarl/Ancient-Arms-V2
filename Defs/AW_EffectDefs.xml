@@ -4,7 +4,7 @@
 	<ThingDef ParentName="MoteBase">
 		<defName>AW_Mote_LaserPointer_Target</defName>
 		<thingClass>MoteAttached</thingClass>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<altitudeLayer>MoteLow</altitudeLayer>
 		<mote>
 			<fadeInTime>0.5</fadeInTime>
 			<fadeOutTime>0.3</fadeOutTime>
@@ -24,7 +24,7 @@
 	<ThingDef ParentName="MoteBase">
 		<defName>AW_Mote_LaserPointer_LineAim</defName>
 		<thingClass>MoteDualAttached</thingClass>
-		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<altitudeLayer>MoteLow</altitudeLayer>
 		<mote>
 			<fadeInTime>0.15</fadeInTime>
 			<fadeOutTime>0</fadeOutTime>

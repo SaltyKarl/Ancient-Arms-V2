@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_12Gauge_ADACharged</defName>
+		<label>12 Gauge Adaptive Charged</label>
+		<ammoTypes>
+			<Ammo_12Gauge_Buck>Bullet_12Gauge_Buck</Ammo_12Gauge_Buck>
+			<Ammo_12Gauge_Slug>Bullet_12Gauge_Slug</Ammo_12Gauge_Slug>
+			<Ammo_12Gauge_Beanbag>Bullet_12Gauge_Beanbag</Ammo_12Gauge_Beanbag>
+			<Ammo_12GaugeCharged>Bullet_12GaugeCharged</Ammo_12GaugeCharged>
+			<Ammo_12GaugeCharged_NE>Bullet_12GaugeCharged_NE</Ammo_12GaugeCharged_NE>
+			<Ammo_12GaugeCharged_CM>Bullet_12GaugeCharged_CM</Ammo_12GaugeCharged_CM>
+			<Ammo_12GaugeCharged_Slug>Bullet_12GaugeCharged_Slug</Ammo_12GaugeCharged_Slug>
+			<Ammo_12GaugeCharged_Ion>Bullet_12GaugeCharged_Ion</Ammo_12GaugeCharged_Ion>
+		</ammoTypes>
+		<similarTo>AmmoSet_ChargedShotgun</similarTo>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12GaugeChargedBase">
+		<defName>Ammo_12GaugeCharged_NE</defName>
+		<label>12 gauge charged (N.E)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Embed/M</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>0.043</Mass>
+		</statBases>
+		<ammoClass>AW_NanoExplosive</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="12GaugeChargedBase">
+		<defName>Ammo_12GaugeCharged_CM</defName>
+		<label>12 gauge charged (NANO)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Charged/Acid/M</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>AW_FleshEatingNanites</ammoClass>
+		<generateAllowChance>0</generateAllowChance>
+	</ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef ParentName="Base12GaugeChargedBullet">
+		<defName>Bullet_12GaugeCharged_NE</defName>
+		<label>charge shot (N.E)</label>
+		<graphicData>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>24</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>AW_NanoExplosive</def>
+					<amount>15</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>15</armorPenetrationSharp>
+			<armorPenetrationBlunt>90</armorPenetrationBlunt>
+			<effectiveRangeMultiplier>1.5</effectiveRangeMultiplier>
+			<recoilMultiplier>2.00</recoilMultiplier>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base12GaugeChargedBullet">
+		<defName>Bullet_12GaugeCharged_CM</defName>
+		<label>charge shot pellet (NANO)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<secondaryDamage>
+				<li>
+					<def>AW_AcidMechanites</def>
+					<amount>1</amount>
+				</li>
+			</secondaryDamage>
+			<armorPenetrationSharp>10</armorPenetrationSharp>
+			<armorPenetrationBlunt>14.4</armorPenetrationBlunt>
+			<pelletCount>6</pelletCount>
+			<spreadMult>8.9</spreadMult>
+			<shieldDamageMultiplier>0.10</shieldDamageMultiplier>
+		</projectile>
+	</ThingDef>
+
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_12GaugeCharged_NE</defName>
+		<label>make 12 Gauge Charged (N.E) shell x200</label>
+		<description>Craft 200 12 Gauge Charged (N.E) shells.</description>
+		<jobString>Making 12 Gauge Charged (N.E) shells.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>8</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12GaugeCharged_NE>200</Ammo_12GaugeCharged_NE>
+		</products>
+		<workAmount>16200</workAmount>
+	</RecipeDef>
+
+	<RecipeDef ParentName="ChargeAmmoRecipeBase">
+		<defName>MakeAmmo_12GaugeCharged_CM</defName>
+		<label>make 12 Gauge Charged (NANO) shell x200</label>
+		<description>Craft 200 12 Gauge Charged (NANO) shells.</description>
+		<jobString>Making 12 Gauge Charged (NANO) shells.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Plasteel</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ComponentIndustrial</li>
+					</thingDefs>
+				</filter>
+				<count>14</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Plasteel</li>
+				<li>Steel</li>
+				<li>ComponentIndustrial</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_12GaugeCharged_CM>200</Ammo_12GaugeCharged_CM>
+		</products>
+		<workAmount>16200</workAmount>
+	</RecipeDef>
+
+</Defs>

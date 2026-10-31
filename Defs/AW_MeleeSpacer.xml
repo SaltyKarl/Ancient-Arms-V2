@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef Name="AW_UltraMeleeWeaponMakeable" ParentName="MeleeWeaponMakeable_CE" Abstract="True">
+		<generateCommonality>0.25</generateCommonality>
+		<techLevel>Spacer</techLevel>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<unfinishedThingDef>UnfinishedPoweredMeleeWeapon</unfinishedThingDef>
+			<recipeUsers Inherit="false">
+				<li>FabricationBench</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+
+	<!-- ==================== Rocket Sledge ==================== -->
+	<ThingDef ParentName="AW_UltraMeleeWeaponMakeable">
+		<defName>AW_ChargeSledgeHammer</defName>
+		<label>Charged Rocket Sledge</label>
+		<description>A heavy two-handed impact weapon commonly used by Glitterworld assault teams in urban breaching. The hammer's blow delivers a wave of ionized plasma into the target, devastating any armor in its way.</description>
+		<weaponClasses>
+			<li>MeleeBlunt</li>
+		</weaponClasses>
+		<graphicData>
+			<texPath>Things/Charged/Power_Sledge</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToMake>50000</WorkToMake>
+			<Mass>5.5</Mass>
+			<Bulk>10</Bulk>
+			<MeleeCounterParryBonus>0.38</MeleeCounterParryBonus>
+		</statBases>
+		<equippedAngleOffset>-25</equippedAngleOffset>
+		<costList>
+			<Steel>60</Steel>
+			<Plasteel>80</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>6</power>
+				<chanceFactor>0.33</chanceFactor>
+				<cooldownTime>1.85</cooldownTime>
+				<armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>65</power>
+				<extraMeleeDamages>
+					<li>
+						<def>Bomb_Secondary</def>
+						<amount>20</amount>
+					</li>
+				</extraMeleeDamages>
+				<cooldownTime>5.00</cooldownTime>
+				<armorPenetrationBlunt>250</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<equippedStatOffsets>
+			<MeleeCritChance>1.75</MeleeCritChance>
+			<MeleeParryChance>0.30</MeleeParryChance>
+			<MeleeDodgeChance>0.30</MeleeDodgeChance>
+		</equippedStatOffsets>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.35,0.30</DrawOffset>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!-- ==================== Rocket Tomahawk ==================== -->
+	<ThingDef ParentName="AW_UltraMeleeWeaponMakeable">
+		<defName>AW_ChargedTomahawk</defName>
+		<label>Charged Rocket Tomahawk</label>
+		<description>A one-handed breach weapon commonly used by Glitterworld assault teams in urban breaching. The Tomahawk cycles ionized plasma on the blade tocut though plasteel with ease.</description>
+		<weaponClasses>
+			<li>MeleePiercer</li>
+		</weaponClasses>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Things/Charged/Power_Axe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.8,0.8)</drawSize>
+		</graphicData>
+		<statBases>
+			<WorkToMake>25000</WorkToMake>
+			<Mass>2.5</Mass>
+			<Bulk>4</Bulk>
+			<MeleeCounterParryBonus>0.40</MeleeCounterParryBonus>
+		</statBases>
+		<weaponTags>
+			<li>CE_OneHandedWeapon</li>
+		</weaponTags>
+		<equippedAngleOffset>-25</equippedAngleOffset>
+		<costList>
+			<Steel>30</Steel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>2</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>6</power>
+				<chanceFactor>0.15</chanceFactor>
+				<cooldownTime>1.85</cooldownTime>
+				<armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>head</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>45</power>
+				<cooldownTime>3</cooldownTime>
+				<extraMeleeDamages>
+					<li>
+						<def>Flame</def>
+						<amount>15</amount>
+					</li>
+				</extraMeleeDamages>
+				<armorPenetrationSharp>40</armorPenetrationSharp>
+				<armorPenetrationBlunt>10</armorPenetrationBlunt>
+				<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+			</li>
+		</tools>
+		<equippedStatOffsets>
+			<MeleeCritChance>0.75</MeleeCritChance>
+			<MeleeParryChance>0.45</MeleeParryChance>
+			<MeleeDodgeChance>0.35</MeleeDodgeChance>
+		</equippedStatOffsets>
+		<thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+		<modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawOffset>0.05,0.05</DrawOffset>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>
