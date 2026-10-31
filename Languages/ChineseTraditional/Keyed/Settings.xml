@@ -5,5 +5,15 @@
   <AntigrainChargeAmmoSpawnChance>反粒子電荷彈藥出現概率</AntigrainChargeAmmoSpawnChance>
   <RestoreDefaults>恢复默认</RestoreDefaults>
   <RequiresCombatExtended>本版本模組需要 Combat Extended 作為前置依賴。</RequiresCombatExtended>
+  <DisableWeapons>禁用模組武器</DisableWeapons>
+  <DisableWeaponsDesc>使遠古電荷武器不再生成、交易、作為任務獎勵或可製作。需要重新啟動遊戲。</DisableWeaponsDesc>
+  <DisableNewAmmo>將模組彈藥替換為原版彈藥</DisableNewAmmo>
+  <DisableNewAmmoDesc>不再讓 N.E、NANO 與反粒子彈藥保持模組的高級彈種，而是依下方選項分別替換為 Combat Extended 的原版彈藥：相同的彈藥類別、彈道、殉爆與佔用體積。武器仍使用原有的彈藥組。需要重新啟動遊戲。</DisableNewAmmoDesc>
+  <SwitchesNeedRestart>兩個開關的改動會在重新啟動 RimWorld 後生效。</SwitchesNeedRestart>
+  <AmmoFallbackHeader>替代彈藥</AmmoFallbackHeader>
+  <AmmoFallbackSameCaliber>同口徑電荷彈藥</AmmoFallbackSameCaliber>
+  <AmmoFallbackSameCaliberDesc>所有 N.E、NANO 與反粒子彈藥都變為同口徑的原版電荷彈，例如 6x24mm 電荷彈。</AmmoFallbackSameCaliberDesc>
+  <AmmoFallbackMech>機械族電荷彈藥</AmmoFallbackMech>
+  <AmmoFallbackMechDesc>所有 N.E、NANO 與反粒子彈藥都變為通用的機械族電荷彈（Mech Charged），即機械族武器所用的那種彈藥。</AmmoFallbackMechDesc>
 
 </LanguageData>

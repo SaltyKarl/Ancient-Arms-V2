@@ -5,4 +5,14 @@
     <AntigrainChargeAmmoSpawnChance>Antigrain Charge Ammo Spawn Chance</AntigrainChargeAmmoSpawnChance>
     <RestoreDefaults>Restore Defaults</RestoreDefaults>
     <RequiresCombatExtended>This version of the mod requires Combat Extended as a dependency.</RequiresCombatExtended>
+    <DisableWeapons>Disable mod weapons</DisableWeapons>
+    <DisableWeaponsDesc>Removes the Ancient Charged Arms weapons from spawning, trading, quest rewards and crafting. Requires a restart.</DisableWeaponsDesc>
+    <DisableNewAmmo>Patch mod ammo into stock ammo</DisableNewAmmo>
+    <DisableNewAmmoDesc>Instead of leaving N.E, NANO and Antigrain as the mod's advanced rounds, each of them is patched into a stock Combat Extended round picked below: same ammo class, ballistics, cook-off and inventory footprint. The weapons keep their own ammo sets. Requires a restart.</DisableNewAmmoDesc>
+    <SwitchesNeedRestart>Changes to the two switches take effect after restarting RimWorld.</SwitchesNeedRestart>
+    <AmmoFallbackHeader>Replacement ammo</AmmoFallbackHeader>
+    <AmmoFallbackSameCaliber>Same-caliber charge ammo</AmmoFallbackSameCaliber>
+    <AmmoFallbackSameCaliberDesc>Every N.E, NANO and Antigrain round becomes the stock charge round of the same caliber, for example 6x24mm Charged.</AmmoFallbackSameCaliberDesc>
+    <AmmoFallbackMech>Mech charged ammo</AmmoFallbackMech>
+    <AmmoFallbackMechDesc>Every N.E, NANO and Antigrain round becomes the universal Mech Charged cartridge, the ammo mechanoid weapons use.</AmmoFallbackMechDesc>
 </LanguageData>

@@ -2,10 +2,18 @@
 <loadFolders>
 	<v1.6>
 		<li>/</li>
-		<li IfModActive="DwS.FunctionalAmmunition.Library">DFunctionalAmmunition</li>
+		<li>1.6</li>
+		<li IfModActive="CETeam.CombatExtendedMelee">Mods/CEMelee</li>
+		<li IfModActive="IssacZhuang.MuzzleFlash">Mods/MuzzleFlash</li>
+		<li IfModActive="MemeGoddess.RunAndGun, roolo.RunAndGun">Mods/RunAndGun</li>
+		<li IfModActive="DwS.FunctionalAmmunition.Library">Mods/DFunctionalAmmunition</li>
 	</v1.6>
 	<v1.7>
 		<li>/</li>
-		<li IfModActive="DwS.FunctionalAmmunition.Library">DFunctionalAmmunition</li>
+		<li>1.7</li>
+		<li IfModActive="CETeam.CombatExtendedMelee">Mods/CEMelee</li>
+		<li IfModActive="IssacZhuang.MuzzleFlash">Mods/MuzzleFlash</li>
+		<li IfModActive="MemeGoddess.RunAndGun, roolo.RunAndGun">Mods/RunAndGun</li>
+		<li IfModActive="DwS.FunctionalAmmunition.Library">Mods/DFunctionalAmmunition</li>
 	</v1.7>
 </loadFolders>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net48</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<AssemblyName>AncientChargedArms</AssemblyName>
 		<AssemblyVersion>2.0</AssemblyVersion>
 		<FileVersion>2.0</FileVersion>
@@ -9,21 +9,22 @@
 		<Company />
 		<Authors />
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<GenerateDependencyFile>false</GenerateDependencyFile>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<OutputPath>..\Assemblies\</OutputPath>
+		<OutputPath>..\1.7\Assemblies\</OutputPath>
 		<DebugType>embedded</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<LangVersion>12.0</LangVersion>
+		<LangVersion>latest</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<OutputPath>..\Assemblies\</OutputPath>
+		<OutputPath>..\1.7\Assemblies\</OutputPath>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<DebugType>none</DebugType>
 		<DebugSymbols>false</DebugSymbols>
-		<LangVersion>12.0</LangVersion>
+		<LangVersion>latest</LangVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 	<ItemGroup>
@@ -31,7 +32,7 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" GeneratePathProperty="true" />
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.4990-unstable" GeneratePathProperty="true" />
 		<PackageReference Include="Lib.Harmony" Version="2.3.6" ExcludeAssets="runtime" />
 	</ItemGroup>
 	<ItemGroup>

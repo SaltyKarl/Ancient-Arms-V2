@@ -26,6 +26,6 @@
     <Import Project="$(NuGetPackageRoot)krafs.publicizer/2.3.0/build/Krafs.Publicizer.props" Condition="Exists('$(NuGetPackageRoot)krafs.publicizer/2.3.0/build/Krafs.Publicizer.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgKrafs_Rimworld_Ref Condition=" '$(PkgKrafs_Rimworld_Ref)' == '' ">/home/carl/.nuget/packages/krafs.rimworld.ref/1.6.4633</PkgKrafs_Rimworld_Ref>
+    <PkgKrafs_Rimworld_Ref Condition=" '$(PkgKrafs_Rimworld_Ref)' == '' ">/home/carl/.nuget/packages/krafs.rimworld.ref/1.7.4990-unstable</PkgKrafs_Rimworld_Ref>
   </PropertyGroup>
 </Project>
