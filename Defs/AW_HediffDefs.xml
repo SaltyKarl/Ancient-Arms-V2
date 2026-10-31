@@ -37,17 +37,12 @@
 			<li>
 				<minSeverity>0.5</minSeverity>
 				<label>mild</label>
-				<vomitMtbDays>0.5</vomitMtbDays>
+				<vomitMtbDays>0.8</vomitMtbDays>
 			</li>
 			<li>
 				<minSeverity>1</minSeverity>
-				<label>Intense</label>
-				<vomitMtbDays>0.2</vomitMtbDays>
-			</li>
-			<li>
-				<minSeverity>2</minSeverity>
 				<label>severe</label>
-				<vomitMtbDays>0.2</vomitMtbDays>
+				<vomitMtbDays>0.5</vomitMtbDays>
 			</li>
 		</stages>
 	</HediffDef>
@@ -79,6 +74,15 @@
 			<li>
 				<minSeverity>0</minSeverity>
 				<label>minor</label>
+				<painOffset>0.01</painOffset>
+				<statFactors>
+					<ArmorRating_Sharp>1</ArmorRating_Sharp>
+					<ArmorRating_Blunt>1</ArmorRating_Blunt>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>moderate</label>
 				<painOffset>0.1</painOffset>
 				<statFactors>
 					<ArmorRating_Sharp>1</ArmorRating_Sharp>
@@ -87,29 +91,11 @@
 			</li>
 			<li>
 				<minSeverity>1</minSeverity>
-				<label>moderate</label>
-				<painOffset>0.15</painOffset>
-				<statFactors>
-					<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
-					<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
-				</statFactors>
-			</li>
-			<li>
-				<minSeverity>2</minSeverity>
 				<label>severe</label>
-				<painOffset>0.2</painOffset>
+				<painOffset>0.15</painOffset>
 				<statFactors>
 					<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
 					<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-				</statFactors>
-			</li>
-			<li>
-				<minSeverity>3</minSeverity>
-				<label>extreme</label>
-				<painOffset>0.4</painOffset>
-				<statFactors>
-					<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
 				</statFactors>
 			</li>
 		</stages>
