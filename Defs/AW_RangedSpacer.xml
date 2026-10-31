@@ -2,11 +2,8 @@
 <Defs>
 
 	<ThingDef Name="AW_UltraRangedWeaponMakeable" ParentName="BaseMakeableGun" Abstract="True">
-		<techLevel>Ultra</techLevel>
+		<techLevel>Spacer</techLevel>
 		<generateCommonality>0.10</generateCommonality>
-		<weaponTags>
-			<li>Ultratech</li>
-		</weaponTags>
 		<thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
@@ -16,7 +13,7 @@
 				<li>FabricationBench</li>
 			</recipeUsers>
 			<skillRequirements>
-				<Crafting>12</Crafting>
+				<Crafting>6</Crafting>
 			</skillRequirements>
 		</recipeMaker>
 	</ThingDef>
@@ -27,7 +24,6 @@
 		<defName>AW_ChargeMateba</defName>
 		<label>Ancient Charged Revolver</label>
 		<description>An Ancient Charge Revolver, Seems unwieldy but the bottom aligned barrel greatly helps with recoil.</description>
-		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_Mateba</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -36,7 +32,6 @@
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<weaponClasses>
 			<li>RangedLight</li>
-			<li>Ultratech</li>
 		</weaponClasses>
 		<statBases>
 			<MarketValue>1000</MarketValue>
@@ -74,7 +69,8 @@
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
 				<magazineSize>6</magazineSize>
-				<reloadTime>3.0</reloadTime>
+				<reloadTime>0.6</reloadTime>
+				<reloadOneAtATime>true</reloadOneAtATime>
 				<ammoSet>AmmoSet_6x24mm_ADACharged</ammoSet>
 			</li>
 			<li Class="CombatExtended.CompProperties_FireModes">
@@ -89,19 +85,15 @@
 			<li>CE_AI_BROOM</li>
 			<li>CE_OneHandedWeapon</li>
 		</weaponTags>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<displayPriority>220</displayPriority>
+		</recipeMaker>
 		<tradeTags>
 			<li>WeaponRanged</li>
 		</tradeTags>
-		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>9</Crafting>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>220</displayPriority>
-		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">
 				<label>grip</label>
@@ -133,7 +125,6 @@
 		<defName>AW_ChargeSMG</defName>
 		<label>Ancient Charged PDW</label>
 		<description>An Ancient PDW, it was commonly carried by mech commanders and infiltration units.</description>
-		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_SMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -142,7 +133,6 @@
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<weaponClasses>
 			<li>RangedLight</li>
-			<li>Ultratech</li>
 		</weaponClasses>
 		<statBases>
 			<MarketValue>1500</MarketValue>
@@ -181,7 +171,7 @@
 		<comps>
 			<li Class="CombatExtended.CompProperties_AmmoUser">
 				<magazineSize>40</magazineSize>
-				<reloadTime>3.5</reloadTime>
+				<reloadTime>4.5</reloadTime>
 				<ammoSet>AmmoSet_6x24mm_ADACharged</ammoSet>
 			</li>
 			<li Class="CombatExtended.CompProperties_FireModes">
@@ -198,19 +188,15 @@
 			<li>CE_AI_BROOM</li>
 			<li>CE_OneHandedWeapon</li>
 		</weaponTags>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>6</Crafting>
+			</skillRequirements>
+			<displayPriority>221</displayPriority>
+		</recipeMaker>
 		<tradeTags>
 			<li>WeaponRanged</li>
 		</tradeTags>
-		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>11</Crafting>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>220</displayPriority>
-		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">
 				<label>grip</label>
@@ -242,7 +228,6 @@
 		<defName>AW_ChargeBR</defName>
 		<label>Ancient Charged BR</label>
 		<description>An Ancient BR, it was commonly issued to mech assisted infantry.</description>
-		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_BR</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -251,7 +236,6 @@
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<weaponClasses>
 			<li>RangedLight</li>
-			<li>Ultratech</li>
 		</weaponClasses>
 		<statBases>
 			<MarketValue>2500</MarketValue>
@@ -309,14 +293,10 @@
 			<li>WeaponRanged</li>
 		</tradeTags>
 		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>230</displayPriority>
+			<displayPriority>222</displayPriority>
 		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">
@@ -359,7 +339,6 @@
 		<defName>AW_ChargeCS</defName>
 		<label>Ancient Charged ChainShotgun</label>
 		<description>An Ancient charged full auto ChainShotgun, it was commonly issued to mech assisted shock troops.</description>
-		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_612</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -371,8 +350,8 @@
 		</weaponClasses>
 		<statBases>
 			<WorkToMake>67500</WorkToMake>
-			<Mass>10</Mass>
-			<Bulk>15.50</Bulk>
+			<Mass>8</Mass>
+			<Bulk>10.50</Bulk>
 			<SwayFactor>1.5</SwayFactor>
 			<ShotSpread>0.10</ShotSpread>
 			<SightsEfficiency>1.15</SightsEfficiency>
@@ -417,19 +396,14 @@
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
 		<weaponTags>
-			<li>Ultratech</li>
 			<li>ShortShots</li>
 			<li>SpacerGun</li>
 		</weaponTags>
 		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>230</displayPriority>
+			<displayPriority>223</displayPriority>
 		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">
@@ -472,7 +446,6 @@
 		<defName>AW_ChargeLMG</defName>
 		<label>Ancient Charged Minigun</label>
 		<description>An Ancient Minigun, it was commonly issued to mech assisted infantry squads.</description>
-		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_HMG</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -489,17 +462,16 @@
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<weaponClasses>
 			<li>RangedHeavy</li>
-			<li>Ultratech</li>
 		</weaponClasses>
 		<statBases>
 			<MarketValue>3500</MarketValue>
 			<WorkToMake>105500</WorkToMake>
-			<Mass>20.0</Mass>
+			<Mass>10.0</Mass>
 			<Bulk>25.0</Bulk>
 			<SwayFactor>1.05</SwayFactor>
 			<ShotSpread>0.05</ShotSpread>
 			<SightsEfficiency>1.25</SightsEfficiency>
-			<RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
 			<Steel>55</Steel>
@@ -548,18 +520,11 @@
 		<tradeTags>
 			<li>WeaponRanged</li>
 		</tradeTags>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.15</MoveSpeed>
-		</equippedStatOffsets>
 		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>13</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>250</displayPriority>
+			<displayPriority>224</displayPriority>
 		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">
@@ -602,7 +567,7 @@
 		<defName>AW_ChargeSR</defName>
 		<label>Ancient Charged AMR</label>
 		<description>An Ancient AMR, it was commonly issued to mech assisted sharpshooters and infiltration units.</description>
-		<techLevel>Ultra</techLevel>
+
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_AMR</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -611,7 +576,6 @@
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<weaponClasses>
 			<li>RangedHeavy</li>
-			<li>Ultratech</li>
 		</weaponClasses>
 		<statBases>
 			<MarketValue>3500</MarketValue>
@@ -619,10 +583,10 @@
 			<Mass>12</Mass>
 			<Bulk>20.5</Bulk>
 			<SwayFactor>2.45</SwayFactor>
-			<ShotSpread>0.05</ShotSpread>
+			<ShotSpread>0.01</ShotSpread>
 			<SightsEfficiency>3.0</SightsEfficiency>
 			<NightVisionEfficiency_Weapon>0.7</NightVisionEfficiency_Weapon>
-			<RangedWeapon_Cooldown>0.42</RangedWeapon_Cooldown>
+			<RangedWeapon_Cooldown>1.42</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
 			<Steel>75</Steel>
@@ -667,18 +631,11 @@
 		<tradeTags>
 			<li>WeaponRanged</li>
 		</tradeTags>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.30</MoveSpeed>
-		</equippedStatOffsets>
 		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>250</displayPriority>
+			<displayPriority>225</displayPriority>
 		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">
@@ -721,7 +678,6 @@
 		<defName>AW_ChargeJavelin</defName>
 		<label>Ancient HEAT Rocket Launcher</label>
 		<description>An Ancient anti tank rocket launcher, Fires two doomsday rockets at a time.</description>
-		<techLevel>Ultra</techLevel>
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charged_HEAT</texPath>
@@ -730,7 +686,6 @@
 		</graphicData>
 		<weaponClasses>
 			<li>RangedHeavy</li>
-			<li>Ultratech</li>
 		</weaponClasses>
 		<statBases>
 			<MarketValue>1500</MarketValue>
@@ -740,6 +695,7 @@
 			<SwayFactor>1.68</SwayFactor>
 			<ShotSpread>0.1</ShotSpread>
 			<SightsEfficiency>2.75</SightsEfficiency>
+			<NightVisionEfficiency_Weapon>0.7</NightVisionEfficiency_Weapon>
 			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
@@ -779,7 +735,6 @@
 		</thingSetMakerTags>
 		<weaponTags>
 			<li>SpacerGun</li>
-			<li>GunSingleUse</li>
 			<li>Gun</li>
 			<li>CE_AI_BROOM</li>
 		</weaponTags>
@@ -787,16 +742,11 @@
 			<li>ExoticMisc</li>
 			<li>WeaponRanged</li>
 		</tradeTags>
-		<relicChance>0</relicChance>
 		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>18</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>250</displayPriority>
+			<displayPriority>230</displayPriority>
 		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">
@@ -818,7 +768,6 @@
 		<defName>AW_ChargeMKThreeOne</defName>
 		<label>Ancient Charged Autocannon</label>
 		<description>An Ancient Autocannon, it was commonly mounted on IFVs, the onboard subpersona ai seems to hate stay in place, will refused to fire when mounted on stationary turrets.</description>
-		<techLevel>Ultra</techLevel>
 		<graphicData>
 			<texPath>Things/Charged/AW_Charge_MK31</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -835,7 +784,6 @@
 		<soundInteract>Interact_ChargeRifle</soundInteract>
 		<weaponClasses>
 			<li>RangedHeavy</li>
-			<li>Ultratech</li>
 		</weaponClasses>
 		<statBases>
 			<MarketValue>3500</MarketValue>
@@ -845,7 +793,8 @@
 			<SwayFactor>1.05</SwayFactor>
 			<ShotSpread>0.05</ShotSpread>
 			<SightsEfficiency>1.85</SightsEfficiency>
-			<RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+			<NightVisionEfficiency_Weapon>0.4</NightVisionEfficiency_Weapon>
+			<RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
 			<Steel>75</Steel>
@@ -891,18 +840,11 @@
 		<tradeTags>
 			<li>WeaponRanged</li>
 		</tradeTags>
-		<equippedStatOffsets>
-			<MoveSpeed>-0.25</MoveSpeed>
-		</equippedStatOffsets>
 		<recipeMaker>
-			<researchPrerequisite>UltraMechtech</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>15</Crafting>
+				<Crafting>10</Crafting>
 			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-			<displayPriority>250</displayPriority>
+			<displayPriority>226</displayPriority>
 		</recipeMaker>
 		<tools>
 			<li Class="CombatExtended.ToolCE">

@@ -4,16 +4,6 @@ using Verse;
 
 namespace AncientChargedArms;
 
-// What the guns fall back to once the mod's own ammo is switched off.
-public enum AmmoFallbackMode
-{
-    // Stock Combat Extended charge ammo of the same caliber, e.g. AmmoSet_6x24mmCharged.
-    SameCaliberCharge,
-
-    // The universal mechanoid cartridge, AmmoSet_MechCharged.
-    MechCharged,
-}
-
 // Settings for the charge ammo this mod adds. Chances are matched by ammo class
 // rather than by def name, so any caliber using that class is covered for free.
 public class AncientChargedArmsSettings : ModSettings
@@ -37,8 +27,11 @@ public class AncientChargedArmsSettings : ModSettings
 
     public static bool DisableNewAmmo;
 
-    // What the guns are patched to while the mod's ammo is switched off.
-    public static AmmoFallbackMode AmmoFallback = AmmoFallbackMode.SameCaliberCharge;
+    // What the mod's own rounds are patched into. Independent of each other, so a
+    // player can take the same-caliber round, the mech round, or both.
+    public static bool PatchToChargeAmmo = true;
+
+    public static bool PatchToMechAmmo;
 
     public override void ExposeData()
     {
@@ -46,7 +39,8 @@ public class AncientChargedArmsSettings : ModSettings
         Scribe_Values.Look(ref AntigrainChargeAmmoSpawnChance, "antigrainChargeAmmoSpawnChance", 0f, true);
         Scribe_Values.Look(ref DisableWeapons, "disableWeapons", false);
         Scribe_Values.Look(ref DisableNewAmmo, "disableNewAmmo", false);
-        Scribe_Values.Look(ref AmmoFallback, "ammoFallback", AmmoFallbackMode.SameCaliberCharge);
+        Scribe_Values.Look(ref PatchToChargeAmmo, "patchToChargeAmmo", true);
+        Scribe_Values.Look(ref PatchToMechAmmo, "patchToMechAmmo", false);
         base.ExposeData();
     }
 
@@ -70,16 +64,10 @@ public class AncientChargedArmsSettings : ModSettings
 
         if (DisableNewAmmo)
         {
-            // What the mod's own rounds are patched into.
+            // What the mod's own rounds are patched into. Both can be ticked at once.
             listing.Label("AmmoFallbackHeader".Translate());
-
-            if (listing.RadioButton("AmmoFallbackSameCaliber".Translate(), AmmoFallback == AmmoFallbackMode.SameCaliberCharge,
-                    0f, "AmmoFallbackSameCaliberDesc".Translate()))
-                AmmoFallback = AmmoFallbackMode.SameCaliberCharge;
-
-            if (listing.RadioButton("AmmoFallbackMech".Translate(), AmmoFallback == AmmoFallbackMode.MechCharged,
-                    0f, "AmmoFallbackMechDesc".Translate()))
-                AmmoFallback = AmmoFallbackMode.MechCharged;
+            listing.CheckboxLabeled("AmmoFallbackSameCaliber".Translate(), ref PatchToChargeAmmo, "AmmoFallbackSameCaliberDesc".Translate());
+            listing.CheckboxLabeled("AmmoFallbackMech".Translate(), ref PatchToMechAmmo, "AmmoFallbackMechDesc".Translate());
 
             listing.Gap();
         }
@@ -114,7 +102,8 @@ public class AncientChargedArmsSettings : ModSettings
         AntigrainChargeAmmoSpawnChance = 0f;
         DisableWeapons = false;
         DisableNewAmmo = false;
-        AmmoFallback = AmmoFallbackMode.SameCaliberCharge;
+        PatchToChargeAmmo = true;
+        PatchToMechAmmo = false;
     }
 
     private static string LabelWithValue(string translationKey, float chance)

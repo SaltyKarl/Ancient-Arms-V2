@@ -206,11 +206,21 @@ public static class AncientChargedArmsDefFilter
             return;
         }
 
+        bool toCharge = AncientChargedArmsSettings.PatchToChargeAmmo;
+        bool toMech = AncientChargedArmsSettings.PatchToMechAmmo;
+
+        if (!toCharge && !toMech)
+        {
+            Log.Message("[Ancient Charged Arms] No replacement ammo ticked, the new ammo was left as is.");
+            return;
+        }
+
         // Snapshot first: patching rewrites the ammo class, so the mod ammo would
         // no longer be recognisable once the first set has been handled.
         HashSet<ThingDef> modAmmo = new(DefDatabase<ThingDef>.AllDefsListForReading.Where(IsModAmmo));
         HashSet<ThingDef> patchedDefs = new();
         int patched = 0;
+        int mechAdded = 0;
 
         // Each caliber we ship has its own *_ADACharged ammo set, and that set is
         // what says which stock ammo its entries should turn into.
@@ -219,7 +229,7 @@ public static class AncientChargedArmsDefFilter
             if (!(def is Def modSet) || modSet.defName == null || !modSet.defName.EndsWith(ModAmmoSetSuffix, StringComparison.Ordinal))
                 continue;
 
-            string stockSetName = StockAmmoSetName(modSet.defName);
+            string stockSetName = toCharge ? StockAmmoSetName(modSet.defName) : MechAmmoSetDefName;
             Def stockSet = FindDef(AmmoSetDefTypeName, stockSetName);
             if (stockSet == null)
             {
@@ -250,15 +260,52 @@ public static class AncientChargedArmsDefFilter
                 // def, so the link is what actually turns N.E into plain charged.
                 AmmoLinkProjectileField.SetValue(link, stockProjectile);
             }
+
+            // Both boxes ticked: the rounds become plain charge ammo, and the mech
+            // cartridge is added alongside them so the guns can still load it.
+            if (toCharge && AddMechAmmoToSet(modSet, ammoTypesField))
+                mechAdded++;
         }
 
         if (patched > 0)
         {
-            string mode = AncientChargedArmsSettings.AmmoFallback == AmmoFallbackMode.MechCharged
-                ? "mech charged ammo"
-                : "same-caliber charge ammo";
+            string mode = toCharge
+                ? (toMech ? "same-caliber charge ammo plus the mech cartridge" : "same-caliber charge ammo")
+                : "mech charged ammo";
             Log.Message("[Ancient Charged Arms] " + patched + " new ammo defs patched into " + mode + ".");
         }
+
+        if (mechAdded > 0)
+            Log.Message("[Ancient Charged Arms] Mech charged ammo added to " + mechAdded + " mod ammo sets.");
+    }
+
+    // Appends the stock mech cartridge to one of our ammo sets, so a gun running the
+    // same-caliber patch still has the mech round available.
+    private static bool AddMechAmmoToSet(Def modSet, FieldInfo ammoTypesField)
+    {
+        Def mechSet = FindDef(AmmoSetDefTypeName, MechAmmoSetDefName);
+        if (mechSet == null)
+            return false;
+
+        object mechLink = AmmoLinks(mechSet, ammoTypesField).FirstOrDefault();
+        if (mechLink == null)
+            return false;
+
+        if (!(AmmoLinkAmmoField.GetValue(mechLink) is ThingDef mechAmmo)
+            || !(AmmoLinkProjectileField.GetValue(mechLink) is ThingDef mechProjectile))
+            return false;
+
+        if (!(ammoTypesField.GetValue(modSet) is IList links))
+            return false;
+
+        foreach (object link in links)
+        {
+            if (AmmoLinkAmmoField.GetValue(link) == mechAmmo)
+                return false;
+        }
+
+        links.Add(Activator.CreateInstance(AmmoLinkAmmoField.DeclaringType, mechAmmo, mechProjectile));
+        return true;
     }
 
     // Makes one ammo def behave and weigh exactly like the stock round it is
@@ -409,14 +456,11 @@ public static class AncientChargedArmsDefFilter
     }
 
     // Our ammo sets are the stock set name plus a suffix; dropping the suffix gives
-    // the same-caliber stock set. The mech fallback ignores the caliber entirely.
+    // the same-caliber stock set.
     private static string StockAmmoSetName(string currentAmmoSet)
     {
         if (currentAmmoSet == null || !currentAmmoSet.EndsWith(ModAmmoSetSuffix, StringComparison.Ordinal))
             return null;
-
-        if (AncientChargedArmsSettings.AmmoFallback == AmmoFallbackMode.MechCharged)
-            return MechAmmoSetDefName;
 
         return currentAmmoSet.Substring(0, currentAmmoSet.Length - ModAmmoSetSuffix.Length) + StockAmmoSetSuffix;
     }
