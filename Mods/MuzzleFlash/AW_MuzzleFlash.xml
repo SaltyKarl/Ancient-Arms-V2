@@ -1,96 +1,195 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<operation Class="PatchOperationAddModExtension">
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
 		<xpath>Defs/ThingDef[defName="AW_ChargeMateba"]</xpath>
-		<!--Gun Def.-->
 		<value>
 			<li Class="MuzzleFlash.MuzzleFlashProps">
 				<def>MF_ChargedMuzzleFalsh</def>
-				<!--Charged muzzle flash for spacer weapons.-->
-				<drawSize>(1,1)</drawSize>
-				<!--Size of the Muzzle flash.-->
+				<drawSize>(0.8,0.8)</drawSize>
 				<offsets>
-					<li>(0.25,0)</li>
-					<!--Where you want to put the flash. X and Y plane.-->
+					<li>(0.25,0.01)</li>
 				</offsets>
 			</li>
 		</value>
-	</operation>
-	<operation Class="PatchOperationAddModExtension">
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeMateba"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.22,0.01)</offset>
+				<offsets>
+					<li>(0.22,0.01)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
 		<xpath>Defs/ThingDef[defName="AW_ChargeSMG"]</xpath>
-		<!--Gun Def.-->
 		<value>
 			<li Class="MuzzleFlash.MuzzleFlashProps">
 				<def>MF_ChargedMuzzleFalsh</def>
-				<!--Charged muzzle flash for spacer weapons.-->
-				<drawSize>(1,1)</drawSize>
-				<!--Size of the Muzzle flash.-->
+				<drawSize>(0.8,0.8)</drawSize>
 				<offsets>
-					<li>(0.4,0)</li>
-					<!--Where you want to put the flash. X and Y plane.-->
+					<li>(0.37,-0)</li>
 				</offsets>
 			</li>
 		</value>
-	</operation>
-	<operation Class="PatchOperationAddModExtension">
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeSMG"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.34,-0)</offset>
+				<offsets>
+					<li>(0.34,-0)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
 		<xpath>Defs/ThingDef[defName="AW_ChargeBR"]</xpath>
 		<value>
 			<li Class="MuzzleFlash.MuzzleFlashProps">
 				<def>MF_ChargedMuzzleFalsh</def>
 				<drawSize>(1,1)</drawSize>
 				<offsets>
-					<li>(0.5,0)</li>
+					<li>(0.62,-0)</li>
 				</offsets>
 			</li>
 		</value>
-	</operation>
-	<operation Class="PatchOperationAddModExtension">
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeBR"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.59,-0)</offset>
+				<offsets>
+					<li>(0.59,-0)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
 		<xpath>Defs/ThingDef[defName="AW_ChargeCS"]</xpath>
 		<value>
 			<li Class="MuzzleFlash.MuzzleFlashProps">
 				<def>MF_ChargedMuzzleFalsh</def>
 				<drawSize>(2,1)</drawSize>
 				<offsets>
-					<li>(0.75,0)</li>
+					<li>(0.67,-0)</li>
 				</offsets>
 			</li>
 		</value>
-	</operation>
-	<operation Class="PatchOperationAddModExtension">
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeCS"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.64,-0)</offset>
+				<offsets>
+					<li>(0.64,-0)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
 		<xpath>Defs/ThingDef[defName="AW_ChargeLMG"]</xpath>
 		<value>
 			<li Class="MuzzleFlash.MuzzleFlashProps">
 				<def>MF_ChargedMuzzleFalsh</def>
-				<drawSize>(2,1)</drawSize>
+				<drawSize>(1.59,0.8)</drawSize>
 				<offsets>
-					<li>(0.8,0)</li>
+					<li>(0.82,-0.15)</li>
 				</offsets>
 			</li>
 		</value>
-	</operation>
-	<operation Class="PatchOperationAddModExtension">
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeLMG"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.79,-0.15)</offset>
+				<offsets>
+					<li>(0.79,-0.15)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
 		<xpath>Defs/ThingDef[defName="AW_ChargeSR"]</xpath>
 		<value>
 			<li Class="MuzzleFlash.MuzzleFlashProps">
 				<def>MF_ChargedMuzzleFalsh</def>
 				<drawSize>(3,1)</drawSize>
 				<offsets>
-					<li>(0.7,0)</li>
+					<li>(0.62,-0)</li>
 				</offsets>
 			</li>
 		</value>
-	</operation>
-	<operation Class="PatchOperationAddModExtension">
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeSR"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.59,-0)</offset>
+				<offsets>
+					<li>(0.59,-0)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
 		<xpath>Defs/ThingDef[defName="AW_ChargeMKThreeOne"]</xpath>
 		<value>
 			<li Class="MuzzleFlash.MuzzleFlashProps">
 				<def>MF_ChargedMuzzleFalsh</def>
 				<drawSize>(3,1)</drawSize>
 				<offsets>
-					<li>(0.90,0)</li>
+					<li>(0.84,-0.15)</li>
 				</offsets>
 			</li>
 		</value>
-	</operation>
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeMKThreeOne"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.81,-0.15)</offset>
+				<offsets>
+					<li>(0.81,-0.15)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeJavelin"]</xpath>
+		<value>
+			<li Class="MuzzleFlash.MuzzleFlashProps">
+				<def>MF_StandardMuzzleFalsh</def>
+				<drawSize>(1.5,1.5)</drawSize>
+				<offsets>
+					<li>(0.72,-0)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
+	<Operation Class="SafePatcher.PatchOperationSetModExtension">
+		<xpath>Defs/ThingDef[defName="AW_ChargeJavelin"]</xpath>
+		<value>
+			<li Class="MuzzleFlashEditor.AimIndicatorExtension">
+				<offset>(0.69,-0)</offset>
+				<offsets>
+					<li>(0.69,-0)</li>
+				</offsets>
+			</li>
+		</value>
+	</Operation>
 
 </Patch>
