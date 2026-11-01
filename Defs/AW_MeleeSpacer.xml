@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef Name="AW_UltraMeleeWeaponMakeable" ParentName="MeleeWeaponMakeable_CE" Abstract="True">
+	<ThingDef Name="AW_UltraMeleeWeaponMakeable" ParentName="BaseMeleeWeapon" Abstract="True">
 		<generateCommonality>0.25</generateCommonality>
 		<techLevel>Spacer</techLevel>
+		<smeltable>false</smeltable>
+		<burnableByRecipe>false</burnableByRecipe>
 		<recipeMaker>
 			<researchPrerequisite>ChargedShot</researchPrerequisite>
-			<unfinishedThingDef>UnfinishedPoweredMeleeWeapon</unfinishedThingDef>
+			<unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
 			<recipeUsers Inherit="false">
 				<li>FabricationBench</li>
 			</recipeUsers>
