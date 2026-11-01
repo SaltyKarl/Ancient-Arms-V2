@@ -166,6 +166,7 @@
 				<soundCast>Shot_ChargeRifle</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
+				<recoilAmount>0.89</recoilAmount>
 			</li>
 		</verbs>
 		<comps>
@@ -269,6 +270,7 @@
 				<soundCast>Shot_ChargeRifle</soundCast>
 				<soundCastTail>GunTail_Light</soundCastTail>
 				<muzzleFlashScale>9</muzzleFlashScale>
+				<recoilAmount>2.05</recoilAmount>
 			</li>
 		</verbs>
 		<comps>
